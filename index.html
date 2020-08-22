@@ -1,1 +1,142 @@
-<b>wesh</b>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hamza in here</title>
+    <style>
+      html {
+        color: #fefefe;
+        font-family: "Quicksand", sans-serif;
+        font-size: 16px;
+      }
+      body,
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      a {
+        color: #fefefe;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      .active {
+        color: red;
+      }
+
+      /* CONTAINER */
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr;
+        background-color: #181818;
+      }
+
+      /* CONTENT  */
+      article {
+        grid-column: 2/5;
+        grid-row: 1/2;
+        background-color: coral;
+      }
+
+      article > .content {
+        height: 100vh;
+        background-color: #181818;
+        border-bottom: 1px solid lightgrey;
+        border-left: 1px solid lightgrey;
+        padding: 1rem;
+      }
+
+      /* MENU  */
+      aside {
+        height: 100vh;
+        background-color: #181818;
+        grid-column: 1/1;
+        grid-row: 1/2;
+        display: grid;
+        row-gap: 1em;
+        grid-template-rows: repeat(3, 1fr);
+        position: sticky;
+        top: 0;
+        padding: 1rem;
+      }
+      aside > img {
+        margin: auto;
+        background-color: snow;
+
+        width: 90%;
+      }
+
+      aside > ul {
+        list-style-position: inside;
+        list-style-type: none;
+      }
+      aside > ul > li {
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <img src="img/photo.jpg" />
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#formations">Formations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#realisation">Realisations</a></li>
+          <li><a href="#competences">Competences</a></li>
+          <li><a href="#loisir">Loisirs</a></li>
+          <li><a href="#content">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            link social
+          </li>
+        </ul>
+      </aside>
+      <article>
+        <div id="home" class="content"><h1>Home</h1></div>
+        <div id="formations" class="content"><h1>FORMATIONS</h1></div>
+        <div id="experiences" class="content"><h1>EXPERIENCES</h1></div>
+      </article>
+    </div>
+  </body>
+</html>
+
+<script>
+  (function () {
+    "use strict";
+
+    var section = document.querySelectorAll(".content");
+    var sections = {};
+    var i = 0;
+
+    Array.prototype.forEach.call(section, function (e) {
+      sections[e.id] = e.offsetTop;
+    });
+
+    window.onscroll = function () {
+      var scrollPosition =
+        document.documentElement.scrollTop || document.body.scrollTop;
+
+      for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+          document.querySelector(".active").setAttribute("class", " ");
+          document
+            .querySelector("a[href*=" + i + "]")
+            .setAttribute("class", "active");
+        }
+      }
+    };
+  })();
+</script>
