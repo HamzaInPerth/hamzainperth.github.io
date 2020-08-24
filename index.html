@@ -1,272 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <title>Hamza in here</title>
-    <style>
-      html {
-        color: black;
-        font-family: "Quicksand", sans-serif;
-        font-size: 16px;
-        background-color: pink;
-        text-align: justify;
-      }
 
-      body,
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+  <title>Hamza in here</title>
+  <style>
+    html {
+      color: black;
+      font-family: "Quicksand", sans-serif;
+      font-size: 16px;
+      background-color: pink;
+      text-align: justify;
+    }
 
-      a {
-        color: black;
-        text-decoration: none;
-        transition: 0.7s;
-      }
+    body,
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
 
-      a:hover {
-        color: pink;
-        transition: 0.7s;
-      }
+    a {
+      color: black;
+      text-decoration: none;
+      transition: 0.7s;
+    }
 
-      .active {
-        color: red;
-        transition: 0.7s;
-      }
+    a:hover {
+      color: pink;
+      transition: 0.7s;
+    }
 
-      /* CONTAINER */
-      .container {
-        display: grid;
-        grid-template-columns: 20% 1fr;
-        grid-template-rows: 3rem 1fr;
-      }
+    .active {
+      color: red;
+      transition: 0.7s;
+    }
 
-      /* CONTENT  */
-      article {
-        grid-column: 2/3;
-        grid-row: 1/5;
-        min-height: 100vh;
-      }
+    /* CONTAINER */
+    .container {
+      display: grid;
+      grid-template-columns: 20% 1fr;
+      grid-template-rows: 3rem 1fr;
+    }
 
-      article > .content {
-        min-height: 100vh;
-        padding: 1rem 0;
-      }
+    /* CONTENT  */
+    article {
+      grid-column: 2/3;
+      grid-row: 1/5;
+      min-height: 100vh;
+    }
 
-      .content > h1 {
-        font-weight: bold;
-        color: white;
-        padding: 1rem;
-        background-color: lightpink;
-        margin: 0 3rem 3rem 3rem;
-        text-shadow: 1px 1px lightgrey;
-      }
+    article>.content {
+      min-height: 100vh;
+      padding: 1rem 0;
+    }
 
-      #home {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-        padding: 0px;
-      }
+    .content>h1 {
+      font-weight: bold;
+      color: white;
+      padding: 1rem;
+      background-color: lightpink;
+      margin: 0 3rem 3rem 3rem;
+      text-shadow: 1px 1px lightgrey;
+    }
 
-      #home > div {
-        margin: auto;
-      }
+    #home {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      padding: 0px;
+    }
 
-      #resume,
-      #realisations,
-      #competences {
-        background-color: rgba(255, 255, 255, 0.8);
-      }
+    #home>div {
+      margin: auto;
+    }
 
-      /* MENU  */
-      aside {
-        height: 100vh;
-        grid-column: 1/2;
-        grid-row: 1/4;
-        display: grid;
-        row-gap: 1rem;
-        grid-template-rows: 20% repeat(3, auto);
-        grid-template-columns: subgrid;
-        background-color: rgba(255, 255, 255, 0.8);
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        text-align: center;
-      }
+    #resume,
+    #realisations,
+    #competences {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
 
-      aside > img {
-        /* A REVOIR */
-        margin: 0 auto;
-        height: 100%;
-        min-width: 100px;
-      }
+    /* MENU  */
+    aside {
+      height: 100vh;
+      grid-column: 1/2;
+      grid-row: 1/4;
+      display: grid;
+      row-gap: 1rem;
+      grid-template-rows: 20% repeat(3, auto);
+      grid-template-columns: subgrid;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      text-align: center;
+    }
 
-      aside > ul {
-        list-style-position: inside;
-        list-style-type: none;
-        padding: 1em auto;
-      }
+    aside>img {
+      /* A REVOIR */
+      margin: 0 auto;
+      height: 100%;
+      min-width: 100px;
+    }
 
-      aside > ul > li {
-        margin: 1em auto;
-      }
+    aside>ul {
+      list-style-position: inside;
+      list-style-type: none;
+      padding: 1em auto;
+    }
 
-      /* RESUME */
+    aside>ul>li {
+      margin: 1em auto;
+    }
+
+    /* RESUME */
+    .resume {
+      display: grid;
+      column-gap: 3rem;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 3rem;
+    }
+
+    .details-resume {
+      border-left: 3px solid pink;
+      padding-left: 20px;
+      line-height: 35px;
+      padding-bottom: 3rem;
+    }
+
+    .title-resume {
+      position: relative;
+      border-left: 3px solid pink;
+      padding-left: 20px;
+    }
+
+    .title-resume:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      left: -15px;
+      top: 0;
+      background-color: white;
+      border: 3px solid pink;
+    }
+
+    .date {
+      padding: 4px;
+      background-color: white;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: grid;
+      column-gap: 3rem;
+      row-gap: 1rem;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 3rem;
+    }
+
+    .skill > img {
+
+  display:flex;
+    }
+
+    .skill {  
+
+      display:flex;
+
+
+    }
+
+    .progress-bar {
+
+      margin: auto auto;
+      border: 1px solid pink;
+      display:flex;
+      width: 100%;
+      text-align: center;
+    }
+
+
+    /* REPONSIVITY */
+    @media only screen and (max-width: 900px) {
       .resume {
-        display: grid;
-        column-gap: 3rem;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 3rem;
+        grid-template-columns: 1fr;
       }
 
-      .details-resume {
-        border-left: 3px solid pink;
-        padding-left: 20px;
-        line-height: 35px;
-        padding-bottom: 3rem;
+      .skill {
+        grid-template-columns: 1fr;
       }
 
-      .title-resume {
-        position: relative;
-        border-left: 3px solid pink;
-        padding-left: 20px;
+      .container {
+        grid-template-columns: 1fr;
       }
 
-      .title-resume:before {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 50px;
-        left: -15px;
-        top: 0;
-        background-color: white;
-        border: 3px solid pink;
+      aside {
+        display: none;
       }
+    }
+  </style>
+</head>
 
-      .date {
-        padding: 4px;
-        background-color: white;
-      }
+<body>
+  <div class="container">
+    <aside>
+      <img src="" style="border: 1px solid black;" />
 
-      /* REPONSIVITY */
-      @media only screen and (max-width: 900px) {
-        .resume {
-          grid-template-columns: 1fr;
-        }
-        .container {
-          grid-template-columns: 1fr;
-        }
-        aside {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <aside>
-        <img src="" style="border: 1px solid black;" />
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#realisations">Realisations</a></li>
+        <li><a href="#competences">Competences</a></li>
+      </ul>
+      <ul>
+        <li>
+          social links
+        </li>
+      </ul>
 
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#realisations">Realisations</a></li>
-          <li><a href="#competences">Competences</a></li>
-        </ul>
-        <ul>
-          <li>
-            social links
-          </li>
-        </ul>
+      <small>
+        <p>Designed by Hamza CHIKHI</p>
+      </small>
+    </aside>
 
-        <small><p>Designed by Hamza CHIKHI</p> </small>
-      </aside>
+    <article>
+      <div id="home" class="content">
+        <div>HI MY NAME IS</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffff" fill-opacity="1" opacity=".8"
+            d="M0,256L360,64L720,128L1080,256L1440,64L1440,320L1080,320L720,320L360,320L0,320Z"></path>
+        </svg>
+      </div>
 
-      <article>
-        <div id="home" class="content">
-          <div>HI MY NAME IS</div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#ffff"
-              fill-opacity="1"
-              opacity=".8"
-              d="M0,256L360,64L720,128L1080,256L1440,64L1440,320L1080,320L720,320L360,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
+      <div id="resume" class="content">
+        <h1>Resume</h1>
+        <div class="resume">
+          <div>
+            <h3 class="title-resume">
+              Dealeur de crack
+            </h3>
+            <div class="details-resume">
+              <small class="date">2019 - 2020</small>
+              <small>Chez la voisine - Australia</small>
 
-        <div id="resume" class="content">
-          <h1>Resume</h1>
-          <div class="resume">
-            <div>
-              <h3 class="title-resume">
-                Dealeur de crack
-              </h3>
-              <div class="details-resume">
-                <small class="date">2019 - 2020</small>
-                <small>La voisine - Australia</small>
-
-                <p>Details du poste</p>
-              </div>
-
-              <h3 class="title-resume">
-                Dealeur de weed
-              </h3>
-              <div class="details-resume">
-                <small class="date">2019 - 2020</small>
-                <small>La voisine - Australia</small>
-
-                <p>
-                  Details du posteDetails du posteDetails du posteDetails du
-                  posteDetails du posteDetails du poste lorem*40
-                </p>
-              </div>
+              <p>Details du poste</p>
             </div>
 
-            <div>
-              <h3 class="title-resume">
-                Dealeur de cocaine
-              </h3>
-              <div class="details-resume">
-                <small class="date">2019 - 2020</small>
-                <small>La voisine - Australia</small>
+            <h3 class="title-resume">
+              Dealeur de weed
+            </h3>
+            <div class="details-resume">
+              <small class="date">2019 - 2020</small>
+              Chez la voisine - Australia</small>
 
-                <p>Details du poste</p>
-              </div>
+              <p>
+                Details du posteDetails du posteDetails du posteDetails du
+                posteDetails du posteDetails du poste lorem*40
+              </p>
+            </div>
+          </div>
 
-              <h3 class="title-resume">
-                Braqueur de banque
-              </h3>
-              <div class="details-resume">
-                <small class="date">2019 - 2020</small>
-                <small>La voisine - Australia</small>
+          <div>
+            <h3 class="title-resume">
+              Dealeur de cocaine
+            </h3>
+            <div class="details-resume">
+              <small class="date">2019 - 2020</small>
+              Chez la voisine - Australia</small>
 
-                <p>
-                  Details du posteDetails du posteDetails du posteDetails du
-                  posteDetails du posteDetails du poste lorem*40
-                </p>
-              </div>
+              <p>Details du poste</p>
+            </div>
+
+            <h3 class="title-resume">
+              Braqueur de banque
+            </h3>
+            <div class="details-resume">
+              <small class="date">2019 - 2020</small>
+              Chez la voisine - Australia</small>
+
+              <p>
+                Details du posteDetails du posteDetails du posteDetails du
+                posteDetails du posteDetails du poste lorem*40
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="realisations" class="content">
-          <h1>Realisations</h1>
+      <div id="realisations" class="content">
+        <h1>Realisations</h1>
+      </div>
+      <div id="competences" class="content">
+        <h1>Competences</h1>
+
+        <div class="skills">
+
+          <div class="skill">  <img src="img/html.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill">        <img src="img/css.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/javascript.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/php.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/mysql.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/vuejs.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/nodejs.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/photoshop.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">        <img src="img/laravel.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill">        <img src="img/github.svg" width="40px" height="40px" /> 
+            <div class="progress-bar">
+              <div style="background-color: pink; width: 10%; height: 100%;        padding: .1rem 0;"><small>10%</small>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div id="competences" class="content">
-          <h1>Competences</h1>
-        </div>
-      </article>
-    </div>
-  </body>
+      </div>
+    </article>
+  </div>
+</body>
+
 </html>
 
 <script>
