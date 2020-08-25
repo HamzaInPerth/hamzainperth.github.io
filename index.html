@@ -651,15 +651,21 @@
 
 <script>
   (function () {
-    fetch("http://hamzachikhi.me/youtube.php", { mode: "cors" }).then(function (
-      response
-    ) {
-      response.json().then(function (data) {
+    async function youtubeApi() {
+      try {
+        response = await fetch("http://hamzachikhi.me/youtube.php", {
+          mode: "cors",
+        });
+        data = await response.json();
         document.querySelector("#display").src =
           "https://www.youtube.com/embed/" +
           data.items[0].contentDetails.videoId;
-      });
-    });
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    youtubeApi();
 
     // VARIABLE
     var title = document.querySelector("#title");
@@ -701,8 +707,6 @@
             .classList.add("class", "active-link");
         }
       }
-
-      // YOUTUBE API KEY  AIzaSyAddKSIoBbfCLH2ZI_M9oBnejfucKHbEsA
     };
   })();
 </script>
