@@ -22,6 +22,10 @@
         margin: 0px;
         padding: 0px;
       }
+      ::selection {
+        background-color: pink;
+        color: white;
+      }
 
       a {
         color: black;
@@ -34,7 +38,7 @@
         transition: 0.7s;
       }
 
-      .active {
+      .active-link {
         color: red;
         transition: 0.7s;
       }
@@ -63,7 +67,7 @@
         color: white;
         padding: 1rem;
         background-color: lightpink;
-        margin: 0 3rem 3rem 3rem;
+        margin: 0 0 3rem 0;
         text-shadow: 1px 1px lightgrey;
       }
 
@@ -186,6 +190,41 @@
         background-color: #ffe5ea;
       }
 
+      /* Realisation */
+
+      .realisations {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+        margin: 0 1rem;
+      }
+
+      .realisations > div {
+        background-color: pink;
+        row-gap: 1rem;
+        display: grid;
+        padding: 1rem;
+        opacity: 0.7;
+        transition: 0.5s;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+
+      .realisations > div:hover {
+        opacity: 1;
+      }
+
+      .realisations > div > img {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+      }
+
+      .realisations > div > p {
+        text-align: justify;
+      }
+
       /* REPONSIVITY */
       @media only screen and (max-width: 900px) {
         .container {
@@ -196,6 +235,9 @@
         }
 
         #skills {
+          grid-template-columns: 1fr;
+        }
+        .realisations {
           grid-template-columns: 1fr;
         }
 
@@ -212,10 +254,10 @@
         <img src="" style="border: 1px solid black;" />
 
         <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#realisations">Realisations</a></li>
-          <li><a href="#competences">Competences</a></li>
+          <li><a href="#home" class="active-link link">Home</a></li>
+          <li><a href="#resume" class="link">Resume</a></li>
+          <li><a href="#realisations" class="link">Realisations</a></li>
+          <li><a href="#competences" class="link">Competences</a></li>
         </ul>
         <ul>
           <li>
@@ -230,7 +272,7 @@
 
       <article>
         <div id="home" class="content">
-          <div>HI MY NAME IS</div>
+          <div>HI MY NAME IS HAMZA, AND THIS IS MY PORTFOLIO.</div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#ffff"
@@ -264,7 +306,6 @@
                 <p>C'etait fun</p>
               </div>
             </div>
-
             <div>
               <h3 class="title-resume">
                 Agriculteur
@@ -285,12 +326,92 @@
 
                 <p>cool</p>
               </div>
+
+              <h3 class="title-resume">
+                👶
+              </h3>
+              <div class="details-resume">
+                <small class="date">Since 1990</small>
+                <small>Life</small>
+
+                <p>
+                  After so many years working there, I still need to read the
+                  documentation as this job is full of surprise.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="realisations" class="content">
           <h1>Realisations</h1>
+          <div class="realisations">
+            <div>
+              <img src="img/laravel.svg" />
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
+                iste nulla ratione, reprehenderit minima quisquam voluptatibus
+                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
+                asperiores numquam, odit sed fugiat veritatis, obcaecati
+                accusantium nesciunt, laboriosam saepe eum quis! Et eum sit
+                neque vel? Voluptatem hic laborum ullam atque eius fugit
+                excepturi laudantium veritatis voluptatibus?
+              </p>
+            </div>
+            <div>
+              <img src="img/laravel.svg" />
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
+                iste nulla ratione, reprehenderit minima quisquam voluptatibus
+                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
+                asperiores numquam, odit sed fugiat veritatis, obcaecati
+                accusantium nesciunt, laboriosam saepe eum quis! Et eum sit
+                neque vel? Voluptatem hic laborum ullam atque eius fugit
+                excepturi laudantium veritatis voluptatibus?
+              </p>
+            </div>
+            <div>
+              <img src="img/laravel.svg" />
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
+                iste nulla ratione, reprehenderit minima quisquam voluptatibus
+                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
+                asperiores numquam, odit sed fugiat veritatis, obcaecati
+                accusantium nesciunt, laboriosam saepe eum quis! Et eum sit
+                neque vel? Voluptatem hic laborum ullam atque eius fugit
+                excepturi laudantium veritatis voluptatibus?
+              </p>
+            </div>
+            <div>
+              <img src="img/laravel.svg" />
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
+                iste nulla ratione, reprehenderit minima quisquam voluptatibus
+                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
+                asperiores numquam, odit sed fugiat veritatis, obcaecati
+                accusantium nesciunt, laboriosam saepe eum quis! Et eum sit
+                neque vel? Voluptatem hic laborum ullam atque eius fugit
+                excepturi laudantium veritatis voluptatibus?
+              </p>
+            </div>
+            <div>
+              <img src="img/laravel.svg" />
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
+                iste nulla ratione, reprehenderit minima quisquam voluptatibus
+                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
+                asperiores numquam, odit sed fugiat veritatis, obcaecati
+                accusantium nesciunt, laboriosam saepe eum quis! Et eum sit
+                neque vel? Voluptatem hic laborum ullam atque eius fugit
+                excepturi laudantium veritatis voluptatibus?
+              </p>
+            </div>
+          </div>
         </div>
         <div id="competences" class="content">
           <h1>Competences</h1>
@@ -441,7 +562,43 @@
             </div>
 
             <div class="skill">
+              <img src="img/mongodb.png" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: pink;
+                    width: 10%;
+                    height: 100%;
+                    padding: 0.1rem 0;
+                  "
+                >
+                  <small>10%</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
               <img src="img/photoshop.svg" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: pink;
+                    width: 10%;
+                    height: 100%;
+                    padding: 0.1rem 0;
+                  "
+                >
+                  <small>10%</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src="img/wordpress.svg" width="40px" height="40px" />
               <div class="progress-bar">
                 <div
                   style="
@@ -488,30 +645,44 @@
     var title = document.querySelector("#title");
 
     ("use strict");
-
-    var section = document.querySelectorAll(".content");
-    var sections = {};
-    var i = 0;
+    // HEIGHT OF DOM
     var screenHeight =
       window.innerHeight ||
       document.documentElement.clientHeight ||
       document.body.clientHeight;
+
+    //HEIGHT OF DOM (ONRESIZE)
+    window.onresize = function () {
+      screenHeight =
+        window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight;
+    };
+
+    // DEFINE ALL
+    var sections = {};
+    section = document.querySelectorAll(".content");
     Array.prototype.forEach.call(section, function (e) {
       sections[e.id] = e.offsetTop - screenHeight / 2;
     });
-    console.log(sections);
+
+    // ONSCROLL CHANGE COLOR OF ACTIVE LINK
     window.onscroll = function () {
       var scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {
-          document.querySelector(".active").setAttribute("class", " ");
+          document
+            .querySelector(".active-link")
+            .classList.remove("active-link");
           document
             .querySelector("a[href*=" + i + "]")
-            .setAttribute("class", "active");
+            .classList.add("class", "active-link");
         }
       }
+
+      // YOUTUBE API KEY  AIzaSyAddKSIoBbfCLH2ZI_M9oBnejfucKHbEsA
     };
   })();
 </script>
