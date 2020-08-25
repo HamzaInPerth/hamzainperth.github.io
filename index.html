@@ -654,7 +654,9 @@
 
 <script>
   (function () {
-    fetch("http://hamzachikhi.me/youtube.php").then(function (response) {
+    fetch("http://hamzachikhi.me/youtube.php", { mode: "cors" }).then(function (
+      response
+    ) {
       response.json().then(function (data) {
         document.querySelector("#display").src =
           "https://www.youtube.com/embed/" +
