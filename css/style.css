@@ -16,19 +16,18 @@ body,
   color: white;
 }
 
+/* LINK */
 a {
   color: #446cb3;
   text-decoration: none;
-  transition: 0.7s;
+  transition: 2s;
 }
-aa:hover {
+a:hover {
   color: #446cb3;
-  transition: 0.7s;
 }
 
 .active-link {
-  color: black;
-  transition: 0.7s;
+  color: crimson;
 }
 
 /* CONTAINER */
@@ -48,9 +47,9 @@ article {
 article .content {
   min-height: 100vh;
   padding: 0 0 3rem 0;
+  background-color: #ecf0f7;
 }
-
-.content > h1 {
+article .content h1 {
   font-weight: bold;
   color: white;
   padding: 1rem;
@@ -59,6 +58,7 @@ article .content {
   text-shadow: 1px 1px lightgrey;
 }
 
+/* HOME */
 #home {
   display: grid;
   grid-template-rows: 1fr;
@@ -70,31 +70,14 @@ article .content {
   background-attachment: fixed;
   background-size: cover;
 }
+#home div {
+  margin: 10% auto 0 auto;
+}
 #home div > h1 {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
   transition: 1s;
   opacity: 1;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: 1s;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: 1s;
-}
-
-#home > div {
-  margin: 10% auto 0 auto;
-}
-
-#resume,
-#realisations,
-#competences {
-  background-color: #ecf0f7;
 }
 
 /* MENU  */
@@ -123,7 +106,7 @@ aside ul {
   list-style-type: none;
   padding: 1em auto;
 }
-aside ul > li {
+aside ul li {
   margin: 1em auto;
 }
 
@@ -216,11 +199,10 @@ aside ul > li {
   transition: 0.7s;
   border-radius: 30px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(65, 3, 3, 0.1);
   -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
 }
-
 .realisations > div:hover {
   background-color: white;
   box-shadow: 3px 7px #888888;
@@ -228,17 +210,6 @@ aside ul > li {
   -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
   -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
-}
-
-.realisations > div > img {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-}
-
-.realisations > div > p {
-  height: 100%;
-  text-align: justify;
 }
 
 /* REPONSIVITY */
@@ -262,6 +233,15 @@ aside ul > li {
   aside {
     display: none;
   }
+}
+.fade-in {
+  opacity: 1;
+  transition: 1s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
