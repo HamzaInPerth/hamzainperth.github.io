@@ -13,7 +13,6 @@
         color: black;
         font-family: "Quicksand", sans-serif;
         font-size: 16px;
-        background-color: pink;
         text-align: justify;
       }
 
@@ -24,23 +23,23 @@
       }
 
       ::selection {
-        background-color: pink;
+        background-color: rgba(68, 108, 179, 1);
         color: white;
       }
 
       a {
-        color: black;
+        color: #6989c2;
         text-decoration: none;
         transition: 0.7s;
       }
 
       a:hover {
-        color: pink;
+        color: rgba(68, 108, 179, 1);
         transition: 0.7s;
       }
 
       .active-link {
-        color: red;
+        color: black;
         transition: 0.7s;
       }
 
@@ -53,7 +52,7 @@
 
       /* CONTENT  */
       article {
-        border: 1px solid pink;
+        border: 1px solid rgba(68, 108, 179, 1);
         grid-column: 2/3;
         grid-row: 1/5;
         min-height: 100vh;
@@ -61,14 +60,14 @@
 
       article > .content {
         min-height: 100vh;
-        padding: 1rem 0;
+        padding: 0 0 3rem 0;
       }
 
       .content > h1 {
         font-weight: bold;
         color: white;
         padding: 1rem;
-        background-color: lightpink;
+        background-color: rgba(68, 108, 179, 1);
         margin: 0 0 3rem 0;
         text-shadow: 1px 1px lightgrey;
       }
@@ -78,20 +77,37 @@
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         padding: 0px;
+        background-image: url("img/bg.jpeg");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-attachment: fixed;
+        background-size: cover;
       }
 
-      #home > h1 {
-        padding: 3rem;
+      #home > div > h1 {
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 1s;
+        opacity: 1;
+      }
+
+      .fade-in {
+        opacity: 1;
+        transition: 1s;
+      }
+      .fade-out {
+        opacity: 0;
+        transition: 1s;
       }
 
       #home > div {
-        margin: auto;
+        margin: 10% auto 0 auto;
       }
 
       #resume,
       #realisations,
       #competences {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(236, 240, 247);
       }
 
       /* MENU  */
@@ -103,7 +119,7 @@
         row-gap: 1rem;
         grid-template-rows: 20% repeat(3, auto);
         grid-template-columns: subgrid;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(236, 240, 247, 1);
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -136,7 +152,7 @@
       }
 
       .details-resume {
-        border-left: 3px solid pink;
+        border-left: 3px solid rgba(68, 108, 179, 1);
         padding-left: 20px;
         line-height: 35px;
         padding-bottom: 3rem;
@@ -144,7 +160,7 @@
 
       .title-resume {
         position: relative;
-        border-left: 3px solid pink;
+        border-left: 3px solid rgba(68, 108, 179, 1);
         padding-left: 20px;
       }
 
@@ -157,7 +173,7 @@
         left: -15px;
         top: 0;
         background-color: white;
-        border: 3px solid pink;
+        border: 3px solid rgba(68, 108, 179, 1);
       }
 
       .date {
@@ -167,13 +183,17 @@
 
       /* SKILLS */
 
-      #skills {
+      #competences > h2 {
+        margin-left: 3rem;
+      }
+
+      .section-skills {
         display: grid;
         column-gap: 3rem;
         row-gap: 1rem;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
-        padding: 0 3rem;
+        padding: 1rem 3rem 3rem 3rem;
       }
 
       .skill > img {
@@ -186,13 +206,14 @@
       }
 
       .progress-bar {
+        color: white;
         margin: auto auto;
-        border: 1px solid pink;
+        border: 1px solid rgba(68, 108, 179, 1);
         display: flex;
         width: 100%;
         text-align: center;
         border-radius: 10px;
-        background-color: #ffe5ea;
+        background-color: rgba(198, 210, 232);
       }
 
       /* Realisation */
@@ -201,18 +222,18 @@
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-
         margin: 0 1rem;
       }
 
       .realisations > div {
-        background-color: pink;
+        background-color: rgba(68, 108, 179, 1);
         row-gap: 1rem;
         display: grid;
         padding: 1rem;
         opacity: 0.7;
         transition: 0.5s;
         border-radius: 30px;
+        overflow: hidden;
       }
 
       .realisations > div:hover {
@@ -221,12 +242,16 @@
 
       .realisations > div > img {
         margin: 0 auto;
+
         width: 50px;
         height: 50px;
+        background-color: darkorange;
       }
 
       .realisations > div > p {
+        height: 100%;
         text-align: justify;
+        background-color: darkgray;
       }
 
       /* REPONSIVITY */
@@ -238,7 +263,7 @@
           grid-template-columns: 1fr;
         }
 
-        #skills {
+        .section-skills {
           grid-template-columns: 1fr;
         }
         .realisations {
@@ -276,8 +301,8 @@
 
       <article>
         <div id="home" class="content">
-          <!-- HI MY NAME IS HAMZA, AND THIS IS MY PORTFOLIO.-->
-          <div>
+          <div id="titletext">
+            <!--
             <iframe
               id="display"
               width="100%"
@@ -285,20 +310,19 @@
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-            ></iframe>
+            ></iframe> -->
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
-              fill="#ffff"
-              fill-opacity="1"
-              opacity=".8"
+              fill="#446cb3"
+              fill-opacity=".5"
               d="M0,256L360,64L720,128L1080,256L1440,64L1440,320L1080,320L720,320L360,320L0,320Z"
             ></path>
           </svg>
         </div>
 
         <div id="resume" class="content">
-          <h1>Resume</h1>
+          <h1 class="section-title">Resume</h1>
           <div class="resume">
             <div>
               <h3 class="title-resume">
@@ -358,18 +382,23 @@
         </div>
 
         <div id="realisations" class="content">
-          <h1>Realisations</h1>
+          <h1 class="section-title">Realisations</h1>
           <div class="realisations">
             <div>
               <img src="img/laravel.svg" />
               <p>
-                1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                eius ab quaerat hic maiores saepe placeat? Doloremque fugiat
-                iste nulla ratione, reprehenderit minima quisquam voluptatibus
-                perspiciatis reiciendis dolor, ducimus necessitatibus.Explicabo
-                asperiores numquam, odit sed fuullam atque eius fugit excepturi
-                laudantium veritatis voluptatibus?
+                DMLOG est un application web reservee aux hoteliers. Elle permet
+                d'ameliorer la communication aux travers des differents
+                departements, et le suivi des taches. Il propose egalement de
+                generer des graphiques de statistiques, et une gestion des
+                utilisateurs.
               </p>
+              <div style="display: flex;">
+                <img src="img/github.svg" width="30px" />
+                <p style="text-align: right; width: 100%;">
+                  Demo
+                </p>
+              </div>
             </div>
             <div>
               <img src="img/laravel.svg" />
@@ -381,6 +410,12 @@
                 asperiores numquam, odit sed fugm atque eius fugit excepturi
                 laudantium veritatis voluptatibus?
               </p>
+              <div style="display: flex;">
+                <img src="img/github.svg" width="30px" />
+                <p style="text-align: right; width: 100%;">
+                  Demo
+                </p>
+              </div>
             </div>
             <div>
               <img src="img/laravel.svg" />
@@ -424,9 +459,9 @@
           </div>
         </div>
         <div id="competences" class="content">
-          <h1>Competences</h1>
-
-          <div id="skills">
+          <h1 class="section-title">Technologies</h1>
+          <h2>Front End</h2>
+          <div class="section-skills">
             <div class="skill">
               <img src="img/html.svg" width="40px" height="40px" />
               <div class="progress-bar">
@@ -434,7 +469,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -452,7 +487,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -470,7 +505,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -480,7 +515,27 @@
                 </div>
               </div>
             </div>
+            <div class="skill">
+              <img src="img/vuejs.svg" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: rgba(68, 108, 179, 1);
+                    width: 10%;
+                    height: 100%;
+                    padding: 0.1rem 0;
+                  "
+                >
+                  <small>10%</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Back End</h2>
 
+          <div class="section-skills">
             <div class="skill">
               <img src="img/php.svg" width="40px" height="40px" />
               <div class="progress-bar">
@@ -488,7 +543,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -506,7 +561,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -524,25 +579,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
-                    width: 10%;
-                    height: 100%;
-                    padding: 0.1rem 0;
-                  "
-                >
-                  <small>10%</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <img src="img/vuejs.svg" width="40px" height="40px" />
-              <div class="progress-bar">
-                <div
-                  style="
-                    border-top-left-radius: 10px;
-                    border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -560,7 +597,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -578,7 +615,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -588,7 +625,9 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          <h2>Design</h2>
+          <div class="section-skills">
             <div class="skill">
               <img src="img/photoshop.svg" width="40px" height="40px" />
               <div class="progress-bar">
@@ -596,7 +635,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -606,7 +645,9 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          <h2>CMS</h2>
+          <div class="section-skills">
             <div class="skill">
               <img src="img/wordpress.svg" width="40px" height="40px" />
               <div class="progress-bar">
@@ -614,7 +655,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -624,7 +665,9 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          <h2>Versionning tool</h2>
+          <div class="section-skills">
             <div class="skill">
               <img src="img/github.svg" width="40px" height="40px" />
               <div class="progress-bar">
@@ -632,7 +675,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: pink;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                     padding: 0.1rem 0;
@@ -651,10 +694,11 @@
 
 <script>
   (function () {
+    // FETCH YOUTUBE API
     async function youtubeApi() {
       try {
         response = await fetch("https://hamzachikhi.me/youtube.php", {
-          mode: "cors",
+          credentials: "include",
         });
         data = await response.json();
         document.querySelector("#display").src =
@@ -665,7 +709,7 @@
       }
     }
 
-    youtubeApi();
+    // youtubeApi();
 
     // VARIABLE
     var title = document.querySelector("#title");
@@ -688,20 +732,32 @@
     // DEFINE ALL
     var sections = {};
     section = document.querySelectorAll(".content");
+
+    title = document.querySelector("#titletext");
+
     Array.prototype.forEach.call(section, function (e) {
       sections[e.id] = e.offsetTop - screenHeight / 2;
     });
 
+    var scrollPosition =
+      document.documentElement.scrollTop || document.body.scrollTop;
+
+    console.log((screenHeight * 100) / screenHeight);
     // ONSCROLL CHANGE COLOR OF ACTIVE LINK
     window.onscroll = function () {
       var scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollPosition < 100) {
+        title.style.opacity = scrollPosition / 100;
+      }
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {
           document
             .querySelector(".active-link")
             .classList.remove("active-link");
+
           document
             .querySelector("a[href*=" + i + "]")
             .classList.add("class", "active-link");
