@@ -56,7 +56,7 @@ article .content h1 {
   text-shadow: 1px 1px lightgrey;
 }
 article .content h2 {
-  padding: 2rem 2rem;
+  padding: 0 2rem;
 }
 
 /* HOME */
