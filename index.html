@@ -34,6 +34,7 @@
       <article>
         <div id="home" class="content">
           <div id="titletext">
+            <h2>HI MY NAME IS HAMZA, AND THIS IS MY PORTFOLIO</h2>
             <!--
             <iframe
               id="display"
@@ -126,13 +127,7 @@
 
             <div>
               <img src="img/laravel.svg" />
-              <p>
-                DMLOG est un application web reservee aux hoteliers. Elle permet
-                d'ameliorer la communication aux travers des differents
-                departements, et le suivi des taches. Il propose egalement de
-                generer des graphiques de statistiques, et une gestion des
-                utilisateurs.
-              </p>
+              <p>CE PORTFOLIO DISPO OPENSOURCE GITHUB</p>
               <div style="display: flex; flex-wrap: nowrap">
                 <div>
                   <img src="img/github.svg" width="30px" />
@@ -143,36 +138,35 @@
             </div>
             <div>
               <img src="img/laravel.svg" />
-              <p>
-                DMLOG est un application web reservee aux hoteliers. Elle permet
-                d'ameliorer la communication aux travers des differents
-                departements, et le suivi des taches. Il propose egalement de
-                generer des graphiques de statistiques, et une gestion des
-                utilisateurs.
-              </p>
+              <p>GBAF</p>
               <div style="display: flex; flex-wrap: nowrap">
                 <div>
-                  <img src="img/github.svg" width="30px" />
+                  <a
+                    href="https://github.com/HamzaInPerth/GBAF"
+                    target="_blank"
+                  >
+                    <img src="img/github.svg" width="30px"
+                  /></a>
                 </div>
 
-                <p style="text-align: right; width: 100%">Demo</p>
+                <p style="text-align: right; width: 100%">
+                  <a href="http://gbaf.hamzachikhi.me" target="_blank">Demo</a>
+                </p>
               </div>
             </div>
             <div>
               <img src="img/laravel.svg" />
-              <p>
-                DMLOG est un application web reservee aux hoteliers. Elle permet
-                d'ameliorer la communication aux travers des differents
-                departements, et le suivi des taches. Il propose egalement de
-                generer des graphiques de statistiques, et une gestion des
-                utilisateurs.
-              </p>
+              <p>CHALET ET CAVIAR</p>
               <div style="display: flex; flex-wrap: nowrap">
                 <div>
                   <img src="img/github.svg" width="30px" />
                 </div>
 
-                <p style="text-align: right; width: 100%">Demo</p>
+                <p style="text-align: right; width: 100%">
+                  <a href="http://chalet.hamzachikhi.me" target="_blank"
+                    >Demo</a
+                  >
+                </p>
               </div>
             </div>
             <div>
@@ -483,15 +477,13 @@
     var scrollPosition =
       document.documentElement.scrollTop || document.body.scrollTop;
 
-    console.log((screenHeight * 100) / screenHeight);
     // ONSCROLL CHANGE COLOR OF ACTIVE LINK
     window.onscroll = function () {
       var scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
 
-      if (scrollPosition < 100) {
-        title.style.opacity = scrollPosition / 100;
-      }
+      opacity = 1 - scrollPosition / 100;
+      title.style.opacity = opacity;
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {

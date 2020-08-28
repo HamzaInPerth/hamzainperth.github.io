@@ -20,7 +20,7 @@ body,
 a {
   color: #446cb3;
   text-decoration: none;
-  transition: 2s;
+  transition: 1s;
 }
 a:hover {
   color: #446cb3;
@@ -35,6 +35,9 @@ a:hover {
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 3rem 1fr;
+}
+.container h2 {
+  margin-left: 3rem;
 }
 
 /* CONTENT  */
@@ -73,11 +76,12 @@ article .content h1 {
 #home div {
   margin: 10% auto 0 auto;
 }
-#home div > h1 {
+#home div h2 {
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
   transition: 1s;
-  opacity: 1;
 }
 
 /* MENU  */
@@ -149,10 +153,6 @@ aside ul li {
 }
 
 /* SKILLS */
-#competences > h2 {
-  margin-left: 3rem;
-}
-
 .section-skills {
   display: grid;
   column-gap: 3rem;
@@ -161,16 +161,14 @@ aside ul li {
   grid-template-columns: 1fr 1fr;
   padding: 1rem 3rem 3rem 3rem;
 }
-
-.skill {
+.section-skills .skill {
   display: flex;
 }
-.skill img {
+.section-skills .skill img {
   display: flex;
   margin-right: 20px;
 }
-
-.progress-bar {
+.section-skills .skill .progress-bar {
   color: white;
   margin: auto auto;
   border: 1px solid #446cb3;
@@ -188,10 +186,8 @@ aside ul li {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   margin: 0 1rem;
 }
-
-.realisations > div {
+.realisations div {
   background-color: rgba(255, 255, 255, 0.5);
-  grid-template-rows: inherit;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
   display: grid;
@@ -203,7 +199,7 @@ aside ul li {
   -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
 }
-.realisations > div:hover {
+.realisations div:hover {
   background-color: white;
   box-shadow: 3px 7px #888888;
   transform: scale(1.02);
