@@ -1,5 +1,4 @@
 $primary: rgba(68, 108, 179, 1);
-
 $bg-content: rgba(236, 240, 247);
 
 html {
@@ -39,9 +38,6 @@ a {
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 3rem 1fr;
-  h2 {
-    margin-left: 3rem;
-  }
 }
 
 /* CONTENT  */
@@ -52,39 +48,38 @@ article {
   min-height: 100vh;
   .content {
     min-height: 100vh;
-    padding: 0 0 3rem 0;
     background-color: $bg-content;
+
     h1 {
       font-weight: bold;
       color: white;
       padding: 1rem;
       background-color: $primary;
-      margin: 0 0 3rem 0;
       text-shadow: 1px 1px lightgrey;
+    }
+    h2 {
+      padding: 2rem 2rem;
     }
   }
 }
 
 /* HOME */
 #home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  padding: 0px;
   background-image: url("../img/bg.jpeg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
   background-size: cover;
-  div {
-    margin: 10% auto 0 auto;
-    h2 {
-      padding: 2rem;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.1);
-      color: black;
-      transition: 1s;
-    }
+  min-height: 100vh;
+}
+
+#titletext {
+  height: 100vh;
+  background-color: rgba(68, 108, 179, 0.5);
+  h2 {
+    padding-top: 30rem;
+    text-align: center;
+    color: white;
   }
 }
 
@@ -123,7 +118,7 @@ aside {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 0 3rem;
+  padding: 3rem 3rem;
 }
 
 .details-resume {
@@ -163,7 +158,8 @@ aside {
   row-gap: 1rem;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 1rem 3rem 3rem 3rem;
+  padding: 0rem 2rem 2rem 2rem;
+
   .skill {
     display: flex;
     img {
@@ -188,27 +184,28 @@ aside {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  margin: 0 1rem;
-  div {
-    background-color: rgba(255, 255, 255, 0.5);
-    grid-template-rows: auto 1fr auto;
-    row-gap: 1rem;
-    display: grid;
-    padding: 1rem;
-    transition: 0.7s;
-    border-radius: 30px;
-    overflow: hidden;
-    -webkit-box-shadow: 0px 0px 10px -1px rgba(65, 3, 3, 0.1);
-    -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
-    &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      box-shadow: 3px 7px #888888;
-      transform: scale(1.02);
-      -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
-      -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
-      box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
-    }
+  padding: 3rem 1rem;
+}
+
+.work-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  display: grid;
+  padding: 1rem;
+  transition: 0.7s;
+  border-radius: 30px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(65, 3, 3, 0.1);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 3px 7px #888888;
+    transform: scale(1.02);
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.46);
   }
 }
 

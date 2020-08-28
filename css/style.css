@@ -36,9 +36,6 @@ a:hover {
   grid-template-columns: 20% 1fr;
   grid-template-rows: 3rem 1fr;
 }
-.container h2 {
-  margin-left: 3rem;
-}
 
 /* CONTENT  */
 article {
@@ -49,7 +46,6 @@ article {
 }
 article .content {
   min-height: 100vh;
-  padding: 0 0 3rem 0;
   background-color: #ecf0f7;
 }
 article .content h1 {
@@ -57,31 +53,30 @@ article .content h1 {
   color: white;
   padding: 1rem;
   background-color: #446cb3;
-  margin: 0 0 3rem 0;
   text-shadow: 1px 1px lightgrey;
+}
+article .content h2 {
+  padding: 2rem 2rem;
 }
 
 /* HOME */
 #home {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  padding: 0px;
   background-image: url("../img/bg.jpeg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
 }
-#home div {
-  margin: 10% auto 0 auto;
+
+#titletext {
+  height: 100vh;
+  background-color: rgba(68, 108, 179, 0.5);
 }
-#home div h2 {
-  padding: 2rem;
+#titletext h2 {
+  padding-top: 30rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: black;
-  transition: 1s;
+  color: white;
 }
 
 /* MENU  */
@@ -119,7 +114,7 @@ aside ul li {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 0 3rem;
+  padding: 3rem 3rem;
 }
 
 .details-resume {
@@ -159,7 +154,7 @@ aside ul li {
   row-gap: 1rem;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 1rem 3rem 3rem 3rem;
+  padding: 0rem 2rem 2rem 2rem;
 }
 .section-skills .skill {
   display: flex;
@@ -184,9 +179,10 @@ aside ul li {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  margin: 0 1rem;
+  padding: 3rem 1rem;
 }
-.realisations div {
+
+.work-item {
   background-color: rgba(255, 255, 255, 0.5);
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
@@ -199,7 +195,7 @@ aside ul li {
   -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
 }
-.realisations div:hover {
+.work-item:hover {
   background-color: white;
   box-shadow: 3px 7px #888888;
   transform: scale(1.02);

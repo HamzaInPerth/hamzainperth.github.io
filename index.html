@@ -32,10 +32,14 @@
       </aside>
 
       <article>
-        <div id="home" class="content">
+        <div id="home" class="sections">
           <div id="titletext">
-            <h2>HI MY NAME IS HAMZA, AND THIS IS MY PORTFOLIO</h2>
-            <!--
+            <h2>
+              HI MY NAME IS HAMZA, I'M A FULL STACK WEB DEVELOPER. THIS IS MY
+              PORTFOLIO
+            </h2>
+          </div>
+          <!--
             <iframe
               id="display"
               width="100%"
@@ -44,17 +48,9 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe> -->
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#446cb3"
-              fill-opacity=".5"
-              d="M0,256L360,64L720,128L1080,256L1440,64L1440,320L1080,320L720,320L360,320L0,320Z"
-            ></path>
-          </svg>
         </div>
 
-        <div id="resume" class="content">
+        <div id="resume" class="content sections">
           <h1>Resume</h1>
           <div class="resume">
             <div>
@@ -104,63 +100,58 @@
           </div>
         </div>
 
-        <div id="realisations" class="content">
+        <div id="realisations" class="content sections">
           <h1>Works</h1>
           <div class="realisations">
-            <div>
-              <img src="img/laravel.svg" />
+            <div class="work-item">
+              <img src="works/dmlog.png" width="100%" />
               <p>
                 DMLOG est un application web reservee aux hoteliers. Elle permet
                 d'ameliorer la communication aux travers des differents
                 departements, et le suivi des taches. Il propose egalement de
-                generer des graphiques de statistiques, et une gestion des
-                utilisateurs.
+                generer des graphiques de statistiques, et de gerer les droits
+                des utilisateurs.
               </p>
-              <div style="display: flex; flex-wrap: nowrap">
-                <div>
-                  <img src="img/github.svg" width="30px" />
-                </div>
+              <div style="display: flex">
+                <img src="img/github.svg" width="30px" />
 
                 <p style="text-align: right; width: 100%">Demo</p>
               </div>
             </div>
 
-            <div>
-              <img src="img/laravel.svg" />
+            <div class="work-item">
+              <img src="works/portfolio.png" width="100%" />
               <p>CE PORTFOLIO DISPO OPENSOURCE GITHUB</p>
               <div style="display: flex; flex-wrap: nowrap">
-                <div>
-                  <img src="img/github.svg" width="30px" />
-                </div>
+                <img src="img/github.svg" width="30px" />
 
-                <p style="text-align: right; width: 100%">Demo</p>
+                <a
+                  href="        https://github.com/HamzaInPerth/hamzainperth.github.io"
+                  target="_blank"
+                  >Demo</a
+                >
+                <p style="text-align: right; width: 100%">:)</p>
               </div>
             </div>
-            <div>
-              <img src="img/laravel.svg" />
+            <div class="work-item">
+              <img src="works/gbaf.png" width="100%" />
               <p>GBAF</p>
               <div style="display: flex; flex-wrap: nowrap">
-                <div>
-                  <a
-                    href="https://github.com/HamzaInPerth/GBAF"
-                    target="_blank"
-                  >
-                    <img src="img/github.svg" width="30px"
-                  /></a>
-                </div>
+                <a href="https://github.com/HamzaInPerth/GBAF" target="_blank">
+                  <img src="img/github.svg" width="30px"
+                /></a>
 
                 <p style="text-align: right; width: 100%">
                   <a href="http://gbaf.hamzachikhi.me" target="_blank">Demo</a>
                 </p>
               </div>
             </div>
-            <div>
-              <img src="img/laravel.svg" />
+            <div class="work-item">
+              <img src="works/chalet.png" width="100%" />
+
               <p>CHALET ET CAVIAR</p>
               <div style="display: flex; flex-wrap: nowrap">
-                <div>
-                  <img src="img/github.svg" width="30px" />
-                </div>
+                <img src="img/github.svg" width="30px" />
 
                 <p style="text-align: right; width: 100%">
                   <a href="http://chalet.hamzachikhi.me" target="_blank"
@@ -169,26 +160,9 @@
                 </p>
               </div>
             </div>
-            <div>
-              <img src="img/laravel.svg" />
-              <p>
-                DMLOG est un application web reservee aux hoteliers. Elle permet
-                d'ameliorer la communication aux travers des differents
-                departements, et le suivi des taches. Il propose egalement de
-                generer des graphiques de statistiques, et une gestion des
-                utilisateurs.
-              </p>
-              <div style="display: flex; flex-wrap: nowrap">
-                <div>
-                  <img src="img/github.svg" width="30px" />
-                </div>
-
-                <p style="text-align: right; width: 100%">Demo</p>
-              </div>
-            </div>
           </div>
         </div>
-        <div id="competences" class="content">
+        <div id="competences" class="content sections">
           <h1>Technologies</h1>
           <h2>Front End</h2>
           <div class="section-skills">
@@ -199,7 +173,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -216,7 +190,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -233,7 +207,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -250,7 +224,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -266,7 +240,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -286,7 +260,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -303,7 +277,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -320,7 +294,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -337,7 +311,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -354,7 +328,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -373,7 +347,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -392,7 +366,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -411,7 +385,7 @@
                   style="
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
-                    background-color: black;
+                    background-color: rgba(68, 108, 179, 1);
                     width: 10%;
                     height: 100%;
                   "
@@ -465,11 +439,11 @@
     };
 
     // DEFINE ALL
-    var sections = {};
-    section = document.querySelectorAll(".content");
+
+    section = document.querySelectorAll(".sections");
 
     title = document.querySelector("#titletext");
-
+    var sections = {};
     Array.prototype.forEach.call(section, function (e) {
       sections[e.id] = e.offsetTop - screenHeight / 2;
     });
@@ -482,8 +456,8 @@
       var scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
 
-      opacity = 1 - scrollPosition / 100;
-      title.style.opacity = opacity;
+      titleOpacity = 1 - scrollPosition / 100;
+      title.style.opacity = titleOpacity;
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {
