@@ -247,7 +247,8 @@ aside {
     background-color: $primaryLowOpacity;
     color: white;
     padding: 1rem 3rem;
-    transition: 1s;
+    transition: 0.5s;
+    font-size: large;
     border: 0px;
     &:hover {
       background-color: $primary;
@@ -286,4 +287,34 @@ aside {
 .fade-out {
   opacity: 0;
   transition: 1s;
+}
+
+.success {
+  color: #265a0e;
+  background-color: palegreen;
+  border: 1px solid #265a0e;
+  padding: 2rem;
+  transition: 0.7s ease-in;
+  border-radius: 25px;
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  overflow: hidden;
+  text-align: center;
+  transform: translateY(150%);
+}
+
+.error {
+  color: #5a0e0e;
+  background-color: rgb(251, 152, 152);
+  border: 1px solid #5a0e0e;
+  padding: 2rem;
+  transition: 0.7s ease-in;
+  border-radius: 25px;
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  overflow: hidden;
+  text-align: center;
+  transform: translateY(150%);
 }

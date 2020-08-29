@@ -35,7 +35,7 @@
           <li><a href="#resume" class="link">Resume</a></li>
           <li><a href="#realisations" class="link">Realisations</a></li>
           <li><a href="#competences" class="link">Competences</a></li>
-          <!--     <li><a href="#contact" class="link">Contact</a></li> -->
+          <li><a href="#contact" class="link">Contact</a></li>
         </ul>
         <ul>
           <li><!-- SOCIAL LINKS ---></li>
@@ -73,7 +73,7 @@
         </div>
 
         <div id="realisations" class="content sections">
-          <h1>Works</h1>
+          <h1>Realisations</h1>
           <div class="realisations">
             <div class="work-item">
               <img src="works/dmlog.png" width="100%" />
@@ -100,8 +100,8 @@
             <div class="work-item">
               <img src="works/portfolio.png" width="100%" />
               <p>
-                Mon portfolio. Il est disponible sur mon compte Github en
-                open-source pour quiconque souhaiterait se faire un portfolio.
+                Mon portfolio est desormais disponible sur Github en
+                open-source.
               </p>
               <div style="display: flex; flex-wrap: nowrap">
                 <a
@@ -156,7 +156,9 @@
                 découvrir la culture mauricienne sur le sol canadien.
               </p>
               <div style="display: flex; flex-wrap: nowrap">
-                <p style="text-align: right; width: 100%"></p>
+                <p style="text-align: right; width: 100%">
+                  Le nom de domaine n'a pas encore ete choisis.
+                </p>
               </div>
             </div>
           </div>
@@ -398,54 +400,50 @@ height: 100%;
             </div>
           </div>
         </div>
-        <!--
+
         <div id="contact" class="content sections">
           <h1>Contact me</h1>
 
-          <form>
-            <input type="text" placeholder="Firstname" />
-            <input type="text" placeholder="Lastname" />
-            <input type="text" placeholder="E-mail" />
-            <input type="number" placeholder="Phone number" />
-            <textarea rows="4" placeholder="Message"></textarea>
+          <form id="sendForm">
+            <input
+              required
+              type="text"
+              name="firstname"
+              placeholder="Firstname"
+            />
+            <input
+              required
+              type="text"
+              name="lastname"
+              placeholder="Lastname"
+            />
+            <input required type="text" name="email" placeholder="E-mail" />
+            <input
+              required
+              type="number"
+              name="phone"
+              placeholder="Phone number"
+            />
+            <input required type="text" name="subject" placeholder="Objet" />
+            <textarea
+              required
+              rows="4"
+              name="message"
+              placeholder="Message"
+            ></textarea>
             <input type="submit" value="Send" />
           </form>
-        </div> -->
+          <div id="notif"></div>
+        </div>
       </article>
     </div>
+    <script src="sendMail.js"></script>
+    <script src="youtubeAPI.js"></script>
   </body>
 </html>
 
 <script>
   (function () {
-    // FETCH YOUTUBE API
-    async function youtubeApi() {
-      try {
-        response = await fetch("https://hamzachikhi.me/youtube.php", {
-          credentials: "include",
-        });
-        data = await response.json();
-        document.querySelector("#display").src =
-          "https://www.youtube.com/embed/" +
-          data.items[0].contentDetails.videoId;
-      } catch (e) {
-        console.log(e);
-      }
-    }
-
-    /*             
-<iframe
-id="display"
-width="100%"
-src=""
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen
-></iframe>
-*/
-
-    // youtubeApi();
-
     // VARIABLE
     var title = document.querySelector("#title");
 
@@ -463,8 +461,6 @@ allowfullscreen
         document.documentElement.clientHeight ||
         document.body.clientHeight;
     };
-
-    // DEFINE ALL
 
     section = document.querySelectorAll(".sections");
 
@@ -492,16 +488,9 @@ allowfullscreen
           document
             .querySelector(".active-link")
             .classList.remove("active-link");
-
           document
             .querySelector("a[href*=" + i + "]")
             .classList.add("class", "active-link");
-
-          // test
-
-          //      document.querySeletor(".content").style.opacity = 1;
-
-          // end of test
         }
       }
     };
