@@ -287,38 +287,28 @@ aside ul li {
   transition: 1s;
 }
 
-.success {
-  color: #265a0e;
-  background-color: palegreen;
-  border: 1px solid #265a0e;
-  padding: 2rem;
-  transition: 0.7s ease-in;
-  border-radius: 25px;
-  bottom: 1rem;
-  width: 50%;
-  margin-left: 1rem;
-  right: 1rem;
+#notif {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  transition: 1s ease-in;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  padding: 0.7rem 2rem;
   position: fixed;
   overflow: hidden;
   text-align: center;
-  transform: translateY(150%);
+}
+
+.success {
+  color: white;
+  background-color: #149b7b;
+  border: 1px solid white;
 }
 
 .error {
-  color: #5a0e0e;
-  background-color: #fb9898;
-  border: 1px solid #5a0e0e;
-  padding: 2rem;
-  transition: 0.7s ease-in;
-  border-radius: 25px;
-  bottom: 1rem;
-  width: 50%;
-  margin-left: 1rem;
-  right: 1rem;
-  position: fixed;
-  overflow: hidden;
-  text-align: center;
-  transform: translateY(150%);
+  color: white;
+  background-color: #be1840;
+  border: 1px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,28 +11,30 @@
         body: new FormData(sendForm),
       });
       let result = await response.json();
-      console.log(result);
+
       children = sendForm.children;
       for (x in children) {
         if (children[x].type !== "submit") {
           children[x].value = "";
         }
       }
-      notif.innerHTML = "Merci. Votre message a bien ete envoye.";
       notif = document.querySelector("#notif");
+      notif.innerHTML = result;
       notif.classList.add("success");
-      notif.style.transform = "translateY(0%)";
+      notif.style.bottom = ".5rem";
       setTimeout(function () {
-        notif.style.transform = "translateY(150%)";
-      }, 2000);
+        notif.style.bottom = "-10rem";
+        notif.classList.remove("success");
+      }, 3000);
     } catch (e) {
       notif.innerHTML = "Error : " + e;
       notif = document.querySelector("#notif");
       notif.classList.add("error");
-      notif.style.transform = "translateY(0%)";
+      notif.style.bottom = ".5rem";
       setTimeout(function () {
-        notif.style.transform = "translateY(150%)";
-      }, 2000);
+        notif.style.bottom = "-10rem";
+        notif.classList.remove("error");
+      }, 3000);
     }
   };
 })();
