@@ -6,7 +6,7 @@
     e.preventDefault();
 
     try {
-      let response = await fetch("http://hamzachikhi.me/sendmail.php", {
+      let response = await fetch("https://hamzachikhi.me/sendmail.php", {
         method: "POST",
         body: new FormData(sendForm),
       });
