@@ -42,7 +42,9 @@
               <img src="img/github.svg" width="40px" height="40px"
             /></a>
           </li>
-          <li>(+33) 07 49 03 00 03</li>
+          <li id="phone">
+            <img src="img/phone.svg" width="40px" height="40px" />
+          </li>
         </ul>
 
         <small>
@@ -502,6 +504,14 @@ height: 100%;
       window.innerHeight ||
       document.documentElement.clientHeight ||
       document.body.clientHeight;
+
+    // DISPLAY PHONE NUMBER
+    var phone = document.querySelector("#phone");
+    phone.addEventListener("click", function () {
+      part1 = "(+33) 07 49 ";
+      part2 = "03 00 03";
+      phone.innerHTML = part1 + part2;
+    });
 
     //HEIGHT OF DOM (ONRESIZE)
     window.onresize = function () {

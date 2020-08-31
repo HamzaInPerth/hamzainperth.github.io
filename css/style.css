@@ -102,10 +102,12 @@ aside {
   position: sticky;
   top: 0;
   text-align: center;
-}
-aside img {
-  width: 70%;
-  margin: 2rem auto;
+  /*
+  img {
+    width: 70%;
+    margin: 2rem auto;
+  }
+  */
 }
 aside p {
   margin: 0rem auto 1rem auto;
