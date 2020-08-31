@@ -122,9 +122,12 @@ aside {
     margin: auto auto;
     list-style-position: inside;
     list-style-type: none;
-    padding: 1em auto;
+    padding: auto;
     letter-spacing: 2px;
     line-height: 22px;
+    display: flex;
+    flex-direction: column;
+
     li {
       margin: 1em auto;
     }
