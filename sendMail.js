@@ -20,8 +20,8 @@
       }
       notif = document.querySelector("#notif");
       notif.innerHTML = result;
-      notif.classList.add("success");
       notif.style.bottom = ".5rem";
+      notif.classList.add("success");
       setTimeout(function () {
         notif.style.bottom = "-10rem";
         notif.classList.remove("success");

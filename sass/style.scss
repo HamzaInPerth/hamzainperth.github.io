@@ -99,7 +99,7 @@ aside {
   grid-row: 1/4;
   display: grid;
   row-gap: 1rem;
-  grid-template-rows: 1fr repeat(3, auto);
+  grid-template-rows: 1fr auto auto;
   grid-template-columns: subgrid;
   background-color: rgba(236, 240, 247, 1);
   position: -webkit-sticky;
@@ -111,10 +111,12 @@ aside {
     margin: 2rem auto;
   }
   p {
-    margin: 1rem auto;
+    margin: 0rem auto 1rem auto;
+    padding: 0px;
   }
 
   ul {
+    margin: auto auto;
     list-style-position: inside;
     list-style-type: none;
     padding: 1em auto;
