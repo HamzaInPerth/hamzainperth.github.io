@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://hamzainperth.github.io");
 header('Content-Type: application/json');
 
 $firstname = htmlspecialchars($_POST['firstname']);
