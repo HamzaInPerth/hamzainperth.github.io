@@ -44,7 +44,7 @@ a:hover {
 /* CONTENT  */
 article {
   grid-column: 2/3;
-  grid-row: 1/5;
+  grid-row: 1/4;
   min-height: 100vh;
 }
 article .content {
@@ -224,8 +224,8 @@ aside ul li {
 }
 
 /* CONTACT */
-#contact input[type="text"],
-#contact input[type="number"],
+#contact input[type=text],
+#contact input[type=number],
 #contact textarea {
   width: 100%;
   padding: 12px 20px;
@@ -237,17 +237,17 @@ aside ul li {
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
-#contact input[type="text"]:hover,
-#contact input[type="number"]:hover,
+#contact input[type=text]:hover,
+#contact input[type=number]:hover,
 #contact textarea:hover {
   background-color: #ecf0f7;
 }
-#contact input[type="text"]:focus,
-#contact input[type="number"]:focus,
+#contact input[type=text]:focus,
+#contact input[type=number]:focus,
 #contact textarea:focus {
   background-color: #ecf0f7;
 }
-#contact input[type="submit"] {
+#contact input[type=submit] {
   background-color: rgba(68, 108, 179, 0.4);
   color: white;
   padding: 1rem 3rem;
@@ -255,7 +255,7 @@ aside ul li {
   font-size: large;
   border: 0px;
 }
-#contact input[type="submit"]:hover {
+#contact input[type=submit]:hover {
   background-color: #446cb3;
 }
 #contact form {

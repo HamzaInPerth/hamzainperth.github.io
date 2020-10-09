@@ -4,7 +4,7 @@
 
   sendForm.onsubmit = async (e) => {
     e.preventDefault();
-
+    notif = document.querySelector("#notif");
     try {
       let response = await fetch("https://hamzachikhi.me/sendmail.php", {
         method: "POST",
@@ -18,7 +18,6 @@
           children[x].value = "";
         }
       }
-      notif = document.querySelector("#notif");
       notif.innerHTML = result;
       notif.style.bottom = ".5rem";
       notif.classList.add("success");
@@ -28,7 +27,7 @@
       }, 3000);
     } catch (e) {
       notif.innerHTML = "Error : " + e;
-      notif = document.querySelector("#notif");
+
       notif.classList.add("error");
       notif.style.bottom = ".5rem";
       setTimeout(function () {
