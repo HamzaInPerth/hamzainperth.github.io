@@ -9,6 +9,11 @@ $phone = htmlspecialchars($_POST['phone']);
 $subject = htmlspecialchars($_POST['subject']);
 $message = htmlspecialchars($_POST['message']);
 
+if ($firstname == null || $lastname == null || $email == null || $phone == null || $subject == null ||$message == null) {
+    echo json_encode("Veuillez remplir tous les champs.");
+    die(http_response_code(422));
+}
+
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $ip = $_SERVER['SERVER_ADDR'];
     $date = date('h:m d/m/Y');
@@ -35,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         echo json_encode("Merci. Votre message a bien ete envoye.");
     } else {
         echo json_encode("Une erreur s'est produite.");
-        http_response_code(400);
+        die(http_response_code(400));
     }
 } else {
     echo "Impossible de realiser cette action.";
-    http_response_code(401);
+    die(http_response_code(401));
 }

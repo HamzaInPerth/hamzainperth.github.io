@@ -36,7 +36,7 @@ a {
 }
 
 .active-link {
-  color: crimson;
+  color: #be1840;
 }
 
 /* CONTAINER */
@@ -100,9 +100,7 @@ aside {
   grid-column: 1/2;
   grid-row: 1/4;
   display: grid;
-  row-gap: 1rem;
-  grid-template-rows: 1fr auto auto;
-  grid-template-columns: subgrid;
+  grid-template-rows: 4fr 1fr auto;
   background-color: rgba(236, 240, 247, 1);
   position: -webkit-sticky;
   position: sticky;
@@ -115,23 +113,32 @@ aside {
   }
   */
   p {
-    margin: 0rem auto 1rem auto;
+    margin: 0rem auto;
     padding: 0px;
   }
 
   ul {
     margin: auto auto;
     list-style-position: inside;
+    justify-content: space-around;
     list-style-type: none;
-    padding: auto;
-    letter-spacing: 2px;
-    line-height: 22px;
+    letter-spacing: 3px;
+    line-height: 20px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
     li {
-      margin: 1em auto;
+      width: 100%;
     }
+  }
+  .button-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
