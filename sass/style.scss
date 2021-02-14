@@ -104,16 +104,18 @@ figure {
 }
 
 #titletext {
-  // background-color: $primaryLowOpacity;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  line-height: 2;
-  height: 100vh;
-  padding: 0 5rem;
+  position: relative;
+  margin: 0 2rem;
+  border: 2px solid $primary;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+
   h2 {
+    color: white;
+    text-align: center;
     letter-spacing: 5px;
-    padding-top: 5rem;
+    line-height: 2;
+    padding-top: 0;
   }
 }
 
