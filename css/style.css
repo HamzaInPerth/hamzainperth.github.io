@@ -66,9 +66,27 @@ article .content h2 {
   padding: 1rem 1rem;
 }
 
+figure {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
+  background-attachment: fixed;
+  animation: clouds_animation 45s linear infinite;
+}
+
+@keyframes clouds_animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2122px 0;
+  }
+}
 /* HOME */
 #home {
-  background-image: url("../img/bg.jpeg");
+  background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
