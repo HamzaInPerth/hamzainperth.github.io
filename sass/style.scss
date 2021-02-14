@@ -106,9 +106,8 @@ figure {
 #titletext {
   position: relative;
   margin: 0 2rem;
-  border: 2px solid $primary;
   top: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: $primaryLowOpacity;
 
   h2 {
     color: white;

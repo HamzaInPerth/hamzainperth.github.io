@@ -99,9 +99,8 @@ figure {
 #titletext {
   position: relative;
   margin: 0 2rem;
-  border: 2px solid #446cb3;
   top: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(68, 108, 179, 0.4);
 }
 #titletext h2 {
   color: white;
