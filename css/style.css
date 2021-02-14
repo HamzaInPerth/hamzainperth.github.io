@@ -87,6 +87,7 @@ figure {
 /* HOME */
 #home {
   background-image: url("../img/bg.png");
+  background-color: rgba(0, 0, 0, 0.2);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
