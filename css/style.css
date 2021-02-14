@@ -69,11 +69,11 @@ article .content h2 {
 figure {
   width: 100%;
   margin: 0;
-  position: relative;
   overflow: hidden;
-  background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
+  background: url("../img/cloud.png");
   background-attachment: fixed;
   animation: clouds_animation 75s linear infinite;
+  background-repeat: repeat-x;
 }
 
 @keyframes clouds_animation {
