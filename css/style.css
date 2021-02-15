@@ -72,7 +72,7 @@ figure {
   overflow: hidden;
   background: url("../img/cloud.png");
   background-attachment: fixed;
-  animation: clouds_animation 100s linear infinite alternate;
+  animation: clouds_animation 400s linear infinite alternate;
   background-repeat: repeat-x;
 }
 
@@ -81,7 +81,7 @@ figure {
     background-position: 0 0;
   }
   100% {
-    background-position: -2122px 0;
+    background-position: -17840px 0;
   }
 }
 /* HOME */
