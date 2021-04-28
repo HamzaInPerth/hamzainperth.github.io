@@ -9,8 +9,8 @@ $phone = htmlspecialchars($_POST['phone']);
 $subject = htmlspecialchars($_POST['subject']);
 $message = htmlspecialchars($_POST['message']);
 
-if ($firstname == null || $lastname == null || $email == null || $phone == null || $subject == null ||$message == null) {
-    echo json_encode("Veuillez remplir tous les champs.");
+if ($firstname == null || $lastname == null || $email == null || $phone == null || $subject == null || $message == null) {
+    echo json_encode("Please fill up the form");
     die(http_response_code(422));
 }
 
@@ -37,12 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $headers = 'X-Mailer: PHP/' . phpversion();
 
     if (mail($to, $subject, $dataMessage, $headers)) {
-        echo json_encode("Merci. Votre message a bien ete envoye.");
+        echo json_encode("Thank you !");
     } else {
-        echo json_encode("Une erreur s'est produite.");
+        echo json_encode("An error occured.");
         die(http_response_code(400));
     }
 } else {
-    echo "Impossible de realiser cette action.";
+    echo "Impossible.";
     die(http_response_code(401));
 }
