@@ -25,15 +25,23 @@ body,
 /* LINK */
 a {
   color: #446cb3;
+  padding: 1rem 0px;
   text-decoration: none;
-  transition: 1s;
+  width: 100%;
+  transition: 0.6s;
+  display: block;
 }
 a:hover {
   color: #446cb3;
 }
 
+.link {
+  width: 100%;
+}
+
 .active-link {
-  color: #be1840;
+  color: #fff;
+  background-color: #446cb3;
 }
 
 /* CONTAINER */
@@ -72,7 +80,7 @@ figure {
   overflow: hidden;
   background: url("../img/cloud.png");
   background-attachment: fixed;
-  animation: clouds_animation 400s linear infinite alternate;
+  animation: clouds_animation 700s linear infinite alternate;
   background-repeat: repeat-x;
 }
 

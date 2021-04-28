@@ -6,7 +6,7 @@
     <meta name="description" content="Web Developer - Portfolio" />
     <meta
       name="keywords"
-      content="HTML, CSS, PHP, MYSQL, WORDPRESS, SASS, JAVASCRIPT, WEB, WEB DEVELOPPEUR, WEB DEVELOPER, FULL STACK, FRONT END, BACK END, PORTFOLIO, CREER UN SITE INTERNET, CONSULTANT, CREATE A WEBSITE"
+      content="HTML, CSS, BOOTSTRAP, TAILWING, VUEJS, NUXTJS, PHP, MYSQL, WORDPRESS, SASS, JAVASCRIPT, WEB, WEB DEVELOPPEUR, WEB DEVELOPER, FULL STACK, FRONT END, BACK END, PORTFOLIO, CREER UN SITE INTERNET, CONSULTANT, CREATE A WEBSITE"
     />
     <meta name="author" content="Hamza CHIKHI" />
     <title>Hamza in here</title>
@@ -17,7 +17,7 @@
       content="Hi, my name is Hamza, I'm a Web Developer."
     />
 
-    <meta property="og:image" content="/img/bg.jpeg" />
+    <meta property="og:image" content="/img/bg.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
@@ -29,11 +29,11 @@
     <div class="container">
       <aside>
         <ul>
-          <li><a href="#home" class="active-link link">Home</a></li>
+          <li class="link"><a href="#home" class="active-link">Home</a></li>
           <!-- li><a href="#resume" class="link">Resume</a></li-->
-          <li><a href="#realisations" class="link">Realisations</a></li>
-          <li><a href="#competences" class="link">Competences</a></li>
-          <li><a href="#contact" class="link">Contact</a></li>
+          <li class="link"><a href="#realisations">Realisations</a></li>
+          <li class="link"><a href="#competences">Competences</a></li>
+          <li class="link"><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="button-menu">
@@ -77,6 +77,21 @@
           <h1>Realisations</h1>
           <div class="realisations">
             <div class="work-item">
+              <img src="works/vytree.jpg" width="100%" />
+              <p>
+                COWORKING - BUREAUX PRIVATIFS - SOLUTION POUR ENTREPRISES -
+                DEFILES - SHOOTING - TOURNAGES - VERNISSAGES - SALONS -
+                HEBERGEMENT - LOCOMOTION - ACCOMPAGNEMENT
+              </p>
+              <div style="display: flex">
+                <p style="text-align: right; width: 100%">
+                  <a href="https://www.vytree.com/" target="_blank"
+                    >Site officiel</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="work-item">
               <img src="works/dmlog.png" width="100%" />
               <p>
                 DMLOG est une application web reservee aux hoteliers. Elle
@@ -85,13 +100,17 @@
                 egalement de generer des graphiques de statistiques, et de gerer
                 les droits des utilisateurs.
               </p>
+              <p>Login: TTE4E0</p>
+              <p>Password: test</p>
               <div style="display: flex">
                 <a href="https://github.com/HamzaInPerth/dmlog" target="_blank">
                   Source</a
                 >
 
                 <p style="text-align: right; width: 100%">
-                  <a href="http://dmlog.hamzachikhi.me/" target="_blank"
+                  <a
+                    href="http://dmlog-app.tmmz3250.odns.fr/#/login"
+                    target="_blank"
                     >Version BETA</a
                   >
                 </p>
@@ -203,6 +222,38 @@
             </div>
 
             <div class="skill">
+              <img src="img/bootstrap.png" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: rgba(68, 108, 179, 1);
+                    width: 90%;
+                    height: 100%;
+                  "
+                >
+                  <small>90%</small>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <img src="img/tailwind.svg" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: rgba(68, 108, 179, 1);
+                    width: 70%;
+                    height: 100%;
+                  "
+                >
+                  <small>70%</small>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
               <img src="img/sass.svg" width="40px" height="40px" />
               <div class="progress-bar">
                 <div
@@ -227,11 +278,11 @@
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
                     background-color: rgba(68, 108, 179, 1);
-                    width: 60%;
+                    width: 70%;
                     height: 100%;
                   "
                 >
-                  <small>60%</small>
+                  <small>70%</small>
                 </div>
               </div>
             </div>
@@ -243,11 +294,27 @@
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
                     background-color: rgba(68, 108, 179, 1);
-                    width: 60%;
+                    width: 70%;
                     height: 100%;
                   "
                 >
-                  <small>60%</small>
+                  <small>70%</small>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <img src="img/nuxt.svg" width="40px" height="40px" />
+              <div class="progress-bar">
+                <div
+                  style="
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: rgba(68, 108, 179, 1);
+                    width: 70%;
+                    height: 100%;
+                  "
+                >
+                  <small>70%</small>
                 </div>
               </div>
             </div>
@@ -297,11 +364,11 @@
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
                     background-color: rgba(68, 108, 179, 1);
-                    width: 60%;
+                    width: 75%;
                     height: 100%;
                   "
                 >
-                  <small>60%</small>
+                  <small>75%</small>
                 </div>
               </div>
             </div>

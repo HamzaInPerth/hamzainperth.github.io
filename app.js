@@ -39,7 +39,7 @@
                     console.log(e.offsetTop)
                     sections[e.id] = e.offsetTop - screenHeight / 2;
                 })
-            
+
     //   })
         }
     }
@@ -58,11 +58,11 @@
       sections[e.id] = e.offsetTop - screenHeight / 2;
     });
 
-    var scrollPosition =
-      document.documentElement.scrollTop || document.body.scrollTop;
+    // var scrollPosition =
+    //   document.documentElement.scrollTop || document.body.scrollTop;
 
     // ONSCROLL CHANGE COLOR OF ACTIVE LINK
-    window.onscroll = function () {
+    window.onscroll = () => {
       var scrollPosition =
         document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -76,9 +76,7 @@
           document
             .querySelector(".active-link")
             .classList.remove("active-link");
-          document
-            .querySelector("a[href*=" + i + "]")
-            .classList.add("class", "active-link");
+          document.querySelector("a[href*=" + i + "]").classList.add("class", "active-link");
         }
       }
     };
