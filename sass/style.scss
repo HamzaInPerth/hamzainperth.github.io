@@ -1,6 +1,10 @@
-$primary: rgba(68, 108, 179, 1);
-$primaryLowOpacity: rgba(68, 108, 179, 0.4);
-$bg-content: rgba(236, 240, 247);
+// $primary: rgba(68, 108, 179, 1);
+// $primaryLowOpacity: rgba(68, 108, 179, 0.4);
+// $bg-content: rgba(236, 240, 247);
+
+$primary: rgb(179, 109, 68);
+$primaryLowOpacity: rgb(179, 109, 68, 0.5);
+$bg-content: rgb(255, 232, 219);
 
 html {
   color: black;
@@ -134,7 +138,7 @@ aside {
   grid-row: 1/4;
   display: grid;
   grid-template-rows: 4fr 1fr auto;
-  background-color: rgba(236, 240, 247, 1);
+  background-color: $bg-content;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -235,9 +239,17 @@ aside {
       width: 100%;
       text-align: center;
       border-radius: 10px;
-      background-color: rgba(198, 210, 232);
+      background-color: $bg-content;
+      overflow: hidden;
     }
   }
+}
+
+.filled {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $primary;
+  height: 75%;
 }
 
 /* Realisation */

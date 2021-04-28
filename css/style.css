@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: #ecf0f7;
+  background-color: #ffe8db;
   overflow-x: hidden;
 }
 
@@ -18,13 +18,13 @@ body,
 }
 
 ::selection {
-  background-color: #446cb3;
+  background-color: #b36d44;
   color: white;
 }
 
 /* LINK */
 a {
-  color: #446cb3;
+  color: #b36d44;
   padding: 1rem 0px;
   text-decoration: none;
   width: 100%;
@@ -32,7 +32,7 @@ a {
   display: block;
 }
 a:hover {
-  color: #446cb3;
+  color: #b36d44;
 }
 
 .link {
@@ -41,7 +41,7 @@ a:hover {
 
 .active-link {
   color: #fff;
-  background-color: #446cb3;
+  background-color: #b36d44;
 }
 
 /* CONTAINER */
@@ -58,16 +58,16 @@ article {
   min-height: 100vh;
 }
 article .content {
-  border-left: 1px solid #446cb3;
+  border-left: 1px solid #b36d44;
   min-height: 100vh;
-  background-color: #ecf0f7;
+  background-color: #ffe8db;
 }
 article .content h1 {
   letter-spacing: 5px;
   font-weight: bold;
   color: white;
   padding: 1rem;
-  background-color: #446cb3;
+  background-color: #b36d44;
   text-shadow: 1px 1px lightgrey;
 }
 article .content h2 {
@@ -108,7 +108,7 @@ figure {
   position: relative;
   margin: 0 2rem;
   top: 50%;
-  background-color: rgba(68, 108, 179, 0.4);
+  background-color: rgba(179, 109, 68, 0.5);
 }
 #titletext h2 {
   color: white;
@@ -125,7 +125,7 @@ aside {
   grid-row: 1/4;
   display: grid;
   grid-template-rows: 4fr 1fr auto;
-  background-color: #ecf0f7;
+  background-color: #ffe8db;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -173,7 +173,7 @@ aside .button-menu {
 }
 
 .details-resume {
-  border-left: 3px solid #446cb3;
+  border-left: 3px solid #b36d44;
   padding-left: 20px;
   line-height: 35px;
   padding-bottom: 3rem;
@@ -181,7 +181,7 @@ aside .button-menu {
 
 .title-resume {
   position: relative;
-  border-left: 3px solid #446cb3;
+  border-left: 3px solid #b36d44;
   padding-left: 20px;
 }
 
@@ -194,7 +194,7 @@ aside .button-menu {
   left: -15px;
   top: 0;
   background-color: white;
-  border: 3px solid #446cb3;
+  border: 3px solid #b36d44;
 }
 
 .date {
@@ -221,12 +221,20 @@ aside .button-menu {
 .section-skills .skill .progress-bar {
   color: white;
   margin: auto auto;
-  border: 1px solid #446cb3;
+  border: 1px solid #b36d44;
   display: flex;
   width: 100%;
   text-align: center;
   border-radius: 10px;
-  background-color: #c6d2e8;
+  background-color: #ffe8db;
+  overflow: hidden;
+}
+
+.filled {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #b36d44;
+  height: 75%;
 }
 
 /* Realisation */
@@ -267,7 +275,7 @@ aside .button-menu {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgba(68, 108, 179, 0.4);
+  border: 1px solid rgba(179, 109, 68, 0.5);
   outline: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -276,15 +284,15 @@ aside .button-menu {
 #contact input[type=text]:hover,
 #contact input[type=number]:hover,
 #contact textarea:hover {
-  background-color: #ecf0f7;
+  background-color: #ffe8db;
 }
 #contact input[type=text]:focus,
 #contact input[type=number]:focus,
 #contact textarea:focus {
-  background-color: #ecf0f7;
+  background-color: #ffe8db;
 }
 #contact input[type=submit] {
-  background-color: rgba(68, 108, 179, 0.4);
+  background-color: rgba(179, 109, 68, 0.5);
   color: white;
   padding: 1rem 3rem;
   transition: 0.5s;
@@ -292,7 +300,7 @@ aside .button-menu {
   border: 0px;
 }
 #contact input[type=submit]:hover {
-  background-color: #446cb3;
+  background-color: #b36d44;
 }
 #contact form {
   margin: 2rem 3rem;
