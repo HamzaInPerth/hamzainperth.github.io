@@ -36,7 +36,7 @@
      //     addEventListener('scroll', function() {
                 var workItem = document.querySelectorAll(".work-item");
                 Array.prototype.forEach.call(workItem, e => {
-                    console.log(e.offsetTop)
+
                     sections[e.id] = e.offsetTop - screenHeight / 2;
                 })
 
@@ -44,19 +44,20 @@
         }
     }
 
+
+
+    /////
+    section = document.querySelectorAll(".sections");
+    title = document.querySelector("#titletext");
+    let sections = {};
+    Array.prototype.forEach.call(section, (e) => {
+      sections[e.id] = e.offsetTop - screenHeight / 2;
+    });
+
     effectOnWorkItem()
 
 
     addEventListener("resize", effectOnWorkItem)
-
-    /////
-    section = document.querySelectorAll(".sections");
-
-    title = document.querySelector("#titletext");
-    var sections = {};
-    Array.prototype.forEach.call(section, function (e) {
-      sections[e.id] = e.offsetTop - screenHeight / 2;
-    });
 
     // var scrollPosition =
     //   document.documentElement.scrollTop || document.body.scrollTop;
