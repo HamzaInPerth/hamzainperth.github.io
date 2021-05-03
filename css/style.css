@@ -239,10 +239,7 @@ aside .button-menu {
 }
 
 .filled {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   background-color: #48b8b8;
-  height: 75%;
 }
 
 /* Realisation */

@@ -8,6 +8,7 @@ $email = htmlspecialchars($_POST['email']);
 $phone = htmlspecialchars($_POST['phone']);
 $subject = htmlspecialchars($_POST['subject']);
 $message = htmlspecialchars($_POST['message']);
+$to = '';
 
 if ($firstname == null || $lastname == null || $email == null || $phone == null || $subject == null || $message == null) {
     echo json_encode("Please fill up the form");
@@ -19,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $date = date('h:m d/m/Y');
     $userAgent = $_SERVER['HTTP_USER_AGENT'];
     $fromPage = $_SERVER['HTTP_REFERER'];
-    $to = 'chikhi.h@gmail.com';
 
     $dataMessage = "
     Message : $message

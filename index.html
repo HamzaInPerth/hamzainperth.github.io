@@ -34,19 +34,27 @@
         d.getElementsByTagName("head")[0].appendChild(s);
       })();
     </script>
-    <script
+    <script src="tarteaucitron/tarteaucitron.js"></script>
+    <script src="tarteaucitron.js"></script>
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-PCY8XF6JCH"
-    ></script>
+    ></script> -->
 
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      tarteaucitron.user.gtagUa = "G-PCY8XF6JCH";
+      // tarteaucitron.user.gtagCrossdomain = ['example.com', 'example2.com'];
+      tarteaucitron.user.gtagMore = function () {
+        /* add here your optionnal gtag() */
+      };
+      (tarteaucitron.job = tarteaucitron.job || []).push("gtag");
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag() {
+      //   dataLayer.push(arguments);
+      // }
+      // gtag("js", new Date());
 
-      gtag("config", "G-PCY8XF6JCH");
+      // gtag("config", "G-PCY8XF6JCH");
     </script>
   </head>
 
