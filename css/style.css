@@ -310,6 +310,11 @@ aside .button-menu {
 #contact form {
   margin: 2rem 3rem;
 }
+#contact form p {
+  text-align: justify;
+  font-size: 2rem;
+  line-height: 3rem;
+}
 
 /* REPONSIVITY */
 @media only screen and (max-width: 900px) {
