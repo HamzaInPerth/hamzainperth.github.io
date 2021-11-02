@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
   overflow-x: hidden;
 }
 
@@ -18,13 +18,13 @@ body,
 }
 
 ::selection {
-  background-color: #48b8b8;
+  background-color: #6040bf;
   color: white;
 }
 
 /* LINK */
 a {
-  color: #48b8b8;
+  color: #6040bf;
   padding: 1rem 0px;
   text-decoration: none;
   width: 100%;
@@ -32,7 +32,7 @@ a {
   display: block;
 }
 a:hover {
-  color: #48b8b8;
+  color: #6040bf;
 }
 
 .link {
@@ -40,12 +40,12 @@ a:hover {
   transition: 0.4s;
 }
 .link:hover {
-  background-color: rgba(72, 184, 184, 0.253);
+  background-color: rgba(96, 64, 191, 0.5);
 }
 
 .active-link {
   color: #fff;
-  background-color: #48b8b8;
+  background-color: #6040bf;
 }
 .active-link:hover {
   color: #fff;
@@ -65,16 +65,16 @@ article {
   min-height: 100vh;
 }
 article .content {
-  border-left: 1px solid #48b8b8;
+  border-left: 1px solid #6040bf;
   min-height: 100vh;
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
 }
 article .content h1 {
   letter-spacing: 5px;
   font-weight: bold;
   color: white;
   padding: 1rem;
-  background-color: #48b8b8;
+  background-color: #6040bf;
   text-shadow: 1px 1px lightgrey;
 }
 article .content h2 {
@@ -115,7 +115,7 @@ figure {
   position: relative;
   margin: 0 2rem;
   top: 50%;
-  background-color: rgba(72, 184, 184, 0.253);
+  background-color: rgba(96, 64, 191, 0.5);
 }
 #titletext h2 {
   color: white;
@@ -132,7 +132,7 @@ aside {
   grid-row: 1/4;
   display: grid;
   grid-template-rows: 4fr 1fr auto;
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -181,7 +181,7 @@ aside .button-menu {
 }
 
 .details-resume {
-  border-left: 3px solid #48b8b8;
+  border-left: 3px solid #6040bf;
   padding-left: 20px;
   line-height: 35px;
   padding-bottom: 3rem;
@@ -189,7 +189,7 @@ aside .button-menu {
 
 .title-resume {
   position: relative;
-  border-left: 3px solid #48b8b8;
+  border-left: 3px solid #6040bf;
   padding-left: 20px;
 }
 
@@ -202,7 +202,7 @@ aside .button-menu {
   left: -15px;
   top: 0;
   background-color: white;
-  border: 3px solid #48b8b8;
+  border: 3px solid #6040bf;
 }
 
 .date {
@@ -229,17 +229,17 @@ aside .button-menu {
 .section-skills .skill .progress-bar {
   color: white;
   margin: auto auto;
-  border: 1px solid #48b8b8;
+  border: 1px solid #6040bf;
   display: flex;
   width: 100%;
   text-align: center;
   border-radius: 10px;
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
   overflow: hidden;
 }
 
 .filled {
-  background-color: #48b8b8;
+  background-color: #6040bf;
 }
 
 /* Realisation */
@@ -280,7 +280,7 @@ aside .button-menu {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid rgba(72, 184, 184, 0.253);
+  border: 1px solid rgba(96, 64, 191, 0.5);
   outline: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -289,15 +289,15 @@ aside .button-menu {
 #contact input[type=text]:hover,
 #contact input[type=number]:hover,
 #contact textarea:hover {
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
 }
 #contact input[type=text]:focus,
 #contact input[type=number]:focus,
 #contact textarea:focus {
-  background-color: rgba(172, 245, 255, 0.075);
+  background-color: rgba(96, 64, 191, 0.075);
 }
 #contact input[type=submit] {
-  background-color: rgba(72, 184, 184, 0.253);
+  background-color: rgba(96, 64, 191, 0.5);
   color: white;
   padding: 1rem 3rem;
   transition: 0.5s;
@@ -305,7 +305,7 @@ aside .button-menu {
   border: 0px;
 }
 #contact input[type=submit]:hover {
-  background-color: #48b8b8;
+  background-color: #6040bf;
 }
 #contact form {
   margin: 2rem 3rem;
