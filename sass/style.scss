@@ -2,9 +2,9 @@
 // $primaryLowOpacity: rgba(68, 108, 179, 0.4);
 // $bg-content: rgba(236, 240, 247);
 
-$primary: rgb(72, 184, 184);
-$primaryLowOpacity: rgba(72, 184, 184, 0.253);
-$bg-content: rgba(172, 245, 255, 0.075);
+$primary: hsl(255%, 50%, 50%);
+$primaryLowOpacity: hsl(255%, 50%, 50%, .50);
+$bg-content: hsl(255%, 50%, 50%, 0.075);
 
 html {
   color: black;
