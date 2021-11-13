@@ -106,7 +106,6 @@ figure {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
-  background-size: cover;
   height: 100vh;
   overflow: hidden;
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "http-server": "^14.0.0",
+    "live-server": "^1.2.1",
     "node-sass": "^4.14.1",
     "sass": "^1.32.12"
   },
@@ -12,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass -w ./sass/style.scss ./css/style.css",
-    "dev": "http-server"
+    "dev": "python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
