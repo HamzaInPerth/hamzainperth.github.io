@@ -64,3 +64,30 @@ window.onscroll = () => {
     }
   }
 };
+
+async function lichessApiRequest() {
+  try {
+    let chessElement = window.document.querySelector('#chess-data')
+    let response = await fetch("https://lichess.org/api/user/hamzainparis", {
+    });
+    let data = await response.json()
+    let totalGame = data.count.all
+    let lastGame = new Date(data.seenAt * 1000)
+    let rating = data.perfs.blitz.rating
+    let url = data.url
+    console.log(data)
+    let element = `
+    <ul>
+      <li><b>Last game :</b> ${lastGame}</li>
+      <li><b>Total game :</b> ${totalGame}</li>
+      <li><b>Rating :</b> ${rating}</li>
+    </ul>
+    <a class="btn" href="${url}" target="_blank">Join me</a>
+    `
+    chessElement.innerHTML = element
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+lichessApiRequest();
