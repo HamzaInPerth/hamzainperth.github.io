@@ -87,7 +87,7 @@ figure {
   overflow: hidden;
   background: url("../img/cloud.png");
   background-attachment: fixed;
-  animation: clouds_animation 700s linear infinite alternate;
+  animation: clouds_animation 200s linear infinite alternate;
   background-repeat: repeat-x;
 }
 
