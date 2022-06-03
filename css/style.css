@@ -119,6 +119,7 @@ figure {
 }
 #titletext h2 {
   color: white;
+  font-weight: 900;
   text-align: center;
   letter-spacing: 5px;
   line-height: 2;
