@@ -10,5 +10,6 @@ module.exports = {
       '/works': {
         page: '/works', query: { title: 'works' },
       }
-    },
+    }
+  }
 }
