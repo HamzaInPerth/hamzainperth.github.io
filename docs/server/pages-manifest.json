@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/about-me": "pages/about-me.html",
+  "/about-me_old": "pages/about-me_old.html",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.html",
+  "/testimonies": "pages/testimonies.html",
+  "/works": "pages/works.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
