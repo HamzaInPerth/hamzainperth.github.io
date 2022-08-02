@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "generate": "next export -o docs",
+    "generate": "next build && next export -o docs",
     "start": "next start",
     "lint": "next lint"
   },
