@@ -7,10 +7,10 @@ function MyWorks() {
         return src
     }
     return (
-        <div className="flex flex-wrap lg:mx-5">
+        <div className="flex flex-wrap mx-3 lg:mx-10">
             {workData.map(function (work, key) {
                 return <div key={key} className="w-full sm:w-1/2 xl:w-1/3 mx-2 sm:mx-0 my-2 group flex flex-col  "  >
-                    <div className="text-black sm:m-1 h-full ease-in-out duration-500 shadow flex flex-col justify-between ">
+                    <div className="text-black sm:m-2 h-full ease-in-out duration-500 shadow flex flex-col justify-between ">
                         {/* BODY */}
                         <div className="flex flex-col justify-between h-full z-40 relative overflow-hidden">
 

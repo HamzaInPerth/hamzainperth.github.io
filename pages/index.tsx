@@ -1,22 +1,44 @@
 // import { BeakerIcon } from '@heroicons/react/solid'
+import Link from 'next/link'
 import Image from 'next/image'
 import github from '../assets/_img/github-logo.png'
 import linkedin from '../assets/_img/linkedin-logo.png'
 import lichess from '../assets/_img/lichess-logo.avif'
+import buyMeCoffee from '../assets/_img/buy-me-a-coffee.png'
+import me from '../assets/_img/me.jpg'
 const Index = () => {
     function imageLoader({ src }: any) {
         return src
     }
+    const links = [
+        {
+            picture: github,
+            alt: "my github",
+            link: 'https://github.com/HamzaInPerth',
+        },
+        {
+            picture: linkedin,
+            alt: "my linkedin",
+            link: 'https://www.linkedin.com/in/hamzafromparis',
+        },
+        {
+            picture: lichess,
+            alt: "Play chess with me",
+            link: 'https://lichess.org/@/hamzainparis',
+        },
+        // {
+        //     picture: buyMeCoffee,
+        //     alt: 'Buy me a coffee',
+        //     link: 'https://buymeacoffee.com/hamzafromparis',
+        // }
+    ]
     return (
-        <div className="min-h-screen p-10 ">
-            <div className="flex flex-col space-y-10 tracking-widest">
-                <div className="my-10 mx-auto w-9/12 pb-10 border-b border-black text-center text-6xl font-semibold ">    <h1 className="text-4xl font-black">Hello! it&apos;s Hamza,</h1>
+        <div className="min-h-screen p-10  tracking-widest leading-loose">
+            <div className="flex flex-col space-y-10 justify-center items-center">
+                <Image loader={imageLoader} alt="hamza" layout="fixed" objectFit="contain" className="rounded-full mx-auto" height={200} width={200} src={me} />
+                <div className="my-10 mx-auto w-9/12 pb-10 border-b border-black text-center text-6xl font-semibold">
+                    <h1 className="text-4xl font-black  tracking-widest leading-relaxed">My name is Hamza,</h1>
                     <p className="text-xl font-medium">I&apos;m a full stack developer.</p></div>
-
-
-
-
-
                 <div className=" w-full flex flex-col space-y-3">
                     <ul>
                         <li><b>Front-end :</b> HTML, CSS, SASS, JAVASCRIPT, TYPESCRIPT</li>
@@ -25,28 +47,27 @@ const Index = () => {
                         <hr />
                     </ul>
                     <ul>
-                        <li><b>Framework/library (css) :</b> Bootstrap, Tailwind</li>
-                        <li><b>Framework/library (js) :</b> Vuejs, Nuxtjs, jQuery</li>
-                        <li><b>Framework (back) :</b> Laravel, Lumen</li>
+                        <li><b>Framework front :</b> Bootstrap, Tailwind, Vuejs, Nuxtjs, jQuery</li>
+                        <li><b>Framework back :</b> Laravel, Lumen</li>
                     </ul>
-                    <p><b className="text-cyan-700">Some random things I am use to : </b>Conventional Commits, Jira, Docker, JWT, Redis, VueX, Axios, SEO, React, NextJS...</p>
+                    <p><b className="text-cyan-700">Some random things I am use to : </b>Conventional Commits, Jira, Docker, JWT, Redis, VueX, Axios, SEO, React, NextJS, Googling...</p>
                     <i className="text-gray-500">This portfolio has been made with NextJs.</i>
-
+                    <span><Link href="/works"><a className="underline hover:no-underline font-semibold text-2xl tracking-widest">Check out my Works</a></Link></span>
                 </div>
                 <div className="w-3/5 border-2 border-black mt-3 mb-10 rounded-full bg-black h-2"></div>
                 <p className="font-light text-xl">When it comes to interact with humans, I use english, or french.</p>
-                <div className="flex flex-row space-x-5  ">
-                    <a href="https://github.com/HamzaInPerth" target="_blank" className="h-16 w-16" rel="noreferrer">
 
-                        <Image loader={imageLoader} alt="Visit my github" src={github} />
-
-                    </a>
-                    <a href="https://www.linkedin.com/in/hamzafromparis" target="_blank" className="h-16 w-16" rel="noreferrer">
-                        <Image loader={imageLoader} src={linkedin} alt="Visit my linkedin" width={500} height={500} />
-                    </a>
-                    <a href="https://lichess.org/@/hamzainparis" target="_blank" className="h-16 w-16" rel="noreferrer">
-                        <Image loader={imageLoader} src={lichess} alt="Play chess with me" width={500} height={500} />
-                    </a>
+                <div className="flex flex-wrap w-full overflow-hidden h-auto">
+                    {links.map(function (element, index) {
+                        return <div key={index} className="block w-24  p-3" >
+                            <a href={element.link} target="_blank"><Image
+                                loader={imageLoader}
+                                src={element.picture}
+                                alt={element.alt}
+                                layout="responsive"
+                            /></a>
+                        </div>
+                    })}
                 </div>
             </div>
         </div >
