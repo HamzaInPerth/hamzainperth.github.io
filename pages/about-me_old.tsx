@@ -17,6 +17,14 @@ interface IAboutMe {
     }>,
 }
 
+interface IFields {
+    date: { value: string },
+    name: { value: string },
+    countryCode: { value: string },
+    telephone: { value: string },
+    message: { value: string }
+}
+
 class AboutMe extends React.Component {
     constructor(props: any) {
         super(props)
@@ -57,17 +65,12 @@ class AboutMe extends React.Component {
         availableDates: [],
     }
 
+
+
     handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         try {
-            const target = event.target as typeof event.target & {
-                date: { value: string },
-                name: { value: string },
-                countryCode: { value: string },
-                telephone: { value: string },
-                message: { value: string }
-
-            };
+            const target = event.target as typeof event.target & IFields;
             const response = await fetch('http://localhost:1234/calendar', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -78,9 +81,9 @@ class AboutMe extends React.Component {
                     message: target.message.value,
                 }),
             })
-            console.log(response)
-            // const result = await response.json()
-            // console.log(result)
+
+            const result = await response.json()
+            console.log(result)
             // alert(`Is this your full name: ${result.data}`)
         } catch (e) {
             console.log(e)
