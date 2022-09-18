@@ -11,6 +11,7 @@ import tailwind from '../../assets/_img/tech_logo/tailwind.svg'
 import typescript from '../../assets/_img/tech_logo/typescript.png'
 import docker from '../../assets/_img/tech_logo/docker.webp'
 
+import biotopia from '../../assets/_img/works/biotopia.svg'
 import vytree from '../../assets/_img/works/vytree.png'
 import dmlog from '../../assets/_img/works/dmlog.png'
 import panel from '../../assets/_img/works/panel.svg'
@@ -20,6 +21,25 @@ import noLogo from '../../assets/_img/no-image.jpeg'
 
 const Works = () => {
     return [
+        {
+            "name": "biotopia",
+            "cover": "url",
+            "logo": biotopia,
+            "link": "https://www.biotopia.bio/",
+            "description": "Biotopia responds to the growth challenges of players in the organic sector.",
+            "details": [
+                {
+                    "picture": nuxtjs,
+                    "alt": "nuxtjs",
+                    "link": "https://nuxtjs.org"
+                },
+                {
+                    "picture": tailwind,
+                    "alt": "tailwind",
+                    "link": "https://tailwindcss.com"
+                }
+            ]
+        },
         {
             "name": "vytree",
             "cover": "url",
