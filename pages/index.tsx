@@ -26,11 +26,11 @@ const Index = () => {
             alt: "Play chess with me",
             link: 'https://lichess.org/@/hamzainparis',
         },
-        // {
-        //     picture: buyMeCoffee,
-        //     alt: 'Buy me a coffee',
-        //     link: 'https://buymeacoffee.com/hamzafromparis',
-        // }
+        {
+            picture: buyMeCoffee,
+            alt: 'Buy me a coffee',
+            link: 'https://buymeacoffee.com/hamzafromparis',
+        }
     ]
     return (
         <div className="min-h-screen p-10  tracking-widest leading-loose">
@@ -59,12 +59,18 @@ const Index = () => {
 
                 <div className="flex flex-wrap w-full overflow-hidden h-auto">
                     {links.map(function (element, index) {
-                        return <div key={index} className="block w-24  p-3" >
+                        return <div key={index} className="block h-24 m-3 relative bg-pink-400"  >
                             <a href={element.link} target="_blank"><Image
+                                placeholder='blur'
                                 loader={imageLoader}
                                 src={element.picture}
                                 alt={element.alt}
-                                layout="responsive"
+                                width={'100%'}
+                                height={'100%'}
+                                layout="fixed"
+                                sizes="(min-width: 400px) 33vw,
+                                (min-width: 60px) 50vw,
+                                100vw"
                             /></a>
                         </div>
                     })}
