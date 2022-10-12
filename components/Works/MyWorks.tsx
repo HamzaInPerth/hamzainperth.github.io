@@ -37,7 +37,7 @@ function MyWorks() {
                                     {work.details.map((detail, index) => {
                                         return <div key={index} style={{ transitionDelay: `${index ? (index * 150 + delay) : delay}ms` }} className=" opacity-0 group-hover:opacity-100 rotate-180  group-hover:rotate-0 group-hover:-mt-4 group-hover:mb-0 -mb-24 delay-300 duration-1000 transition-all  ease-in-out">
                                             <a href={detail.link} target="_blank" rel="noreferrer" className="rounded-full shadow-xl">
-                                                <div className="h-12 w-12 mx-1 p-3 bg-white rounded-full shadow-xl border border-gray-300">
+                                                <div className="h-12 w-12 mx-1 p-3 bg-white rounded-full shadow-xl border border-gray-300 saturate-12 cursor-pointer">
                                                     <Image loader={imageLoader} src={detail.picture} alt={detail.alt} />
                                                 </div>
                                             </a>
