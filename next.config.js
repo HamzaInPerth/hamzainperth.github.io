@@ -14,7 +14,7 @@ module.exports = {
       '/works': {
         page: '/works',
       },
-      // 'contact': { page: '/contact' },
+      'contact': { page: '/contact' },
     }
   },
   experimental: {

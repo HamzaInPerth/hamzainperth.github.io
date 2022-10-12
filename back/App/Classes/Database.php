@@ -25,7 +25,7 @@ class Database
      *
      * @return \PDO
      */
-    public static function getDatabase(): \PDO
+    public static function start(): \PDO
     {
         if (!self::$instance) {
             new DataBase();

@@ -7,12 +7,13 @@ $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 // CONFIG
-header('Access-Control-Allow-Origin:' . getenv('CLIENT', 'WHATEBER'));
+header('Access-Control-Allow-Origin:' . getenv('CLIENT', 'WHATEHER'));
 header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Methods: GET,POST,OPTION');
 header("Access-Control-Allow-Headers: *");
 header('Content-Type: application/json; charset=utf-8');
-date_default_timezone_set(getenv('TIMEZONE', 'Europe/Paris'));
+date_default_timezone_set('America/New_York');
+// date_default_timezone_set(getenv('TIMEZONE', 'Europe/Paris'));
 
 // ROUTER
 $router = new \Bramus\Router\Router();

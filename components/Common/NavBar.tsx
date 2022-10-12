@@ -49,7 +49,7 @@ class NavBar extends React.Component {
                     <ul>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/"><a>Home</a></Link></li>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li>
-                        {/* <li onClick={() => this.toggleMenu(false)}><Link href="/about-me"><a>About me</a></Link></li> */}
+                        <li onClick={() => this.toggleMenu(false)}><Link href="/contact"><a>Contact</a></Link></li>
                     </ul>
                 </div>
             </div>)
