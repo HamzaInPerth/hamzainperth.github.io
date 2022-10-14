@@ -13,6 +13,8 @@
     ],
     "require": {
         "bramus/router": "^1.6",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "spatie/calendar-links": "^1.8",
+        "google/apiclient": "^2.12.1"
     }
 }

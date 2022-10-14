@@ -1,4 +1,6 @@
 /node_modules
 /old//node_modules
 /back/.env
+/back/service-account-credentials.json
+/back/vendor
 /.next

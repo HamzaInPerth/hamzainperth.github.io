@@ -93,7 +93,7 @@ class Contact extends React.Component {
 
             const result = await response.json()
             console.log(result)
-            alert(`Is this your full name: ${result.data}`)
+            // alert(`Is this your full name: ${result.data}`)
         } catch (e) {
             console.log(e)
         } finally {
