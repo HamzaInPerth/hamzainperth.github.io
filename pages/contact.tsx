@@ -93,6 +93,7 @@ class Contact extends React.Component {
                     message: target.message.value,
                 }),
             })
+
             if (response.status === 200) {
                 const result = await response.json()
                 console.log(result)
@@ -112,6 +113,7 @@ class Contact extends React.Component {
     }
 
     onReCAPTCHAChange = (captchaCode: any): any => {
+        console.log(captchaCode)
         // If the reCAPTCHA code is null or undefined indicating that
         // the reCAPTCHA was expired then return early
         if (!captchaCode) {
