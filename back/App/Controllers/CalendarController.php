@@ -6,6 +6,7 @@ use \Spatie\CalendarLinks\Link;
 use App\Classes\Database;
 use \Google\Client;
 use \Google\Service\Calendar;
+use \Google\Service\Calendar\Event;
 
 class CalendarController
 {
@@ -42,13 +43,13 @@ class CalendarController
             $date = date("Y-m-d H:i:s", $reqBody['date'] / 1000);
 
             $datetime = new \DateTime($date);
-            $date = $datetime->format(\DateTime::ATOM); // Updated ISO8601
+            $from = $datetime->format(\DateTime::ATOM); // Updated ISO8601
             $name = (string)$reqBody['name'];
             $telephone = (string)$reqBody['telephone'];
             $message = (string)$reqBody['message'];
 
             $db = Database::start();
-            $sql = "INSERT INTO meetings (`name`, `tel`, `message`, `date`) VALUES ('$name', '$telephone', '$message', '$date');";
+            $sql = "INSERT INTO meetings (`name`, `tel`, `message`, `date`) VALUES ('$name', '$telephone', '$message', '$from');";
             $db->query($sql);
 
             $credentialsPath =  dirname(__DIR__) . '/../service-account-credentials.json';
@@ -66,20 +67,22 @@ class CalendarController
                 $service = new Calendar($client);
 
                 $currentDate = date("d/m/Y h:m:s");
-                $event = new \Google\Service\Calendar\Event([
+                $datetime->add(new \DateInterval('PT1H'));
+                $to = $datetime->format(\DateTime::ATOM);
+                $event = new Event([
                     'summary' => "Call $name",
                     'location' => '',
                     'description' => "Date: $currentDate \n Name : $name \n Message : $message \n Phone : $telephone",
                     'start' => array(
-                        'dateTime' => $date,
+                        'dateTime' => $from,
                         'timeZone' => getenv('TIMEZONE'),
                     ),
                     'end' => array(
-                        'dateTime' => $date, // + 1h
+                        'dateTime' => $to,
                         'timeZone' => getenv('TIMEZONE'),
                     ),
                     'recurrence' => array(
-                        'RRULE:FREQ=DAILY;COUNT=2'
+                        'RRULE:FREQ=DAILY;COUNT=1'
                     ),
                     'reminders' => array(
                         'useDefault' => FALSE,
@@ -90,14 +93,9 @@ class CalendarController
                     ),
                 ]);
 
-                $insertedEvent = $service->events->insert($calendarId, $event);
-
-                $linkForUser = Link::create(
-                    "Call with Hamza",
-                    $datetime,
-                    $datetime // +1h
-                )->description($message)->google();
-                echo   json_encode($linkForUser);
+                // $insertedEvent = $service->events->insert($calendarId, $event);
+                // echo json_encode([$insertedEvent->htmlLink]);
+                echo json_encode([]);
             } else {
                 throw new \Exception('Auth file not found.');
             }
