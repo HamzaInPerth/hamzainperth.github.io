@@ -16,7 +16,8 @@ interface IContact {
         available: number,
         unix: number
     }>,
-    recaptchaRef: any
+    recaptchaRef: any,
+    showSubmitButton: Boolean
 }
 
 interface IFields {
@@ -63,7 +64,6 @@ class Contact extends React.Component {
     datePickerScrolling = (moveForward: boolean): void => {
         const refMouseDownInterval = setInterval(() => {
             this.state.datePickerRef.current.scrollLeft = this.state.datePickerRef.current.scrollLeft + (moveForward ? 20 : -20)
-
         }, 20)
         this.setState({ refMouseDownInterval })
     }
@@ -76,13 +76,14 @@ class Contact extends React.Component {
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         countryCodeOptions: [],
         availableDates: [],
-        recaptchaRef: React.createRef()
+        recaptchaRef: React.createRef(),
+        showSubmitButton: false
     }
 
     handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         try {
-            // this.state.recaptchaRef.current.execute();
+            this.onReCAPTCHAChange
             const target = event.target as typeof event.target & IFields;
             const response = await fetch('http://localhost:4321/calendar', {
                 method: 'POST',
@@ -112,26 +113,34 @@ class Contact extends React.Component {
         clearInterval(this.state.refMouseDownInterval)
     }
 
-    onReCAPTCHAChange = (captchaCode: any): any => {
-        console.log(captchaCode)
-        // If the reCAPTCHA code is null or undefined indicating that
-        // the reCAPTCHA was expired then return early
-        if (!captchaCode) {
-            return;
+    onReCAPTCHAChange = (captchaCode: string | null | undefined): void => {
+        if (captchaCode) {
+            this.setState({ showSubmitButton: true })
+        } else {
+            this.state.recaptchaRef.current.reset();
+            this.setState({ showSubmitButton: false })
         }
-        // Else reCAPTCHA was executed successfully so proceed with the
-        // alert
-        alert(`Hey`);
-        // Reset the reCAPTCHA so that it can be executed again if user
-        // submits another email.
-        this.state.recaptchaRef.current.reset();
     }
 
+
     render() {
-        const { messageCount, availableDates, countryCodeOptions, datePicked, timezone, datePickerRef, recaptchaRef } = this.state
+        const { messageCount, availableDates, countryCodeOptions, datePicked, timezone, datePickerRef, recaptchaRef, showSubmitButton } = this.state
+
+        const SubmitButton = ({ display }: { display: Boolean }): any => {
+            if (display) {
+                return (
+                    <button type="submit" className="mx-auto align-middle hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded">
+                        Envoyer
+                    </button>)
+            } else {
+                return null
+            }
+        }
+
+
         return (
             <>
-                <div className="my-10 mx-auto w-10/12 pb-10 border-b border-black text-center text-6xl font-semibold">
+                <div className="my-10 mx-auto w-10/12 pb-10 border-b border-black text-center text- 6xl font-semibold">
                     Contact
                 </div>
                 <form className="w-full max-w-3xl mx-auto px-5" onSubmit={this.handleSubmit}>
@@ -248,18 +257,18 @@ class Contact extends React.Component {
                             />
                         </div>
                     </div>
-                    <ReCAPTCHA
-                        className="my-10"
-                        ref={recaptchaRef}
-                        size="normal"
-                        sitekey={'6Ldb0LwiAAAAAIgY4ZDyZACKHesjmBQSiownuZCB'}
-                        onChange={this.onReCAPTCHAChange}
-                    />
-                    <div className="flex flex-wrap -mx-3 mb-6">
-                        <div className="w-full px-3 mb-6 md:mb-0">
-                            <button type="submit" className="mx-auto hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded">
-                                Book a call
-                            </button>
+                    <div className="flex flex-wrap">
+                        <ReCAPTCHA
+                            className="flex flex-col m-auto justify-center"
+                            ref={recaptchaRef}
+                            size="normal"
+                            sitekey="6Ldb0LwiAAAAAIgY4ZDyZACKHesjmBQSiownuZCB"
+                            onChange={this.onReCAPTCHAChange}
+                        />
+                        <div className="flex flex-col m-auto justify-center p-5 ">
+                            {/* <div className=" bg-orange-600 w-100"> */}
+                                <SubmitButton display={showSubmitButton} />
+                            {/* </div> */}
                         </div>
                     </div>
                 </form>

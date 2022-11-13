@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import Image, { ImageLoader } from 'next/image'
+import { ImgHTMLAttributes } from 'react'
 import workData from './workData'
 
 function MyWorks() {
     let delay = 300
-    function imageLoader({ src }: any) {
+
+    function imageLoader({src}: any) {
         return src
     }
     return (
@@ -16,7 +18,7 @@ function MyWorks() {
 
                             {/* OVERLAY */}
                             <div className="absolute h-full w-full group-hover:opacity-0 group-hover:pointer-events-none group-hover:scale-x-0 group-hover:skew-x-12 group-hover:rotate-180 group-hover:delay-0 delay-700 transition-all duration-700 px-10 py-5 ease-in-out bg-white flex flex-col justify-center">
-                                <Image loader={imageLoader} src={work.logo} alt={work.name} className="object-contain " />
+                                <Image loader={imageLoader} src={work.logo} alt={work.name} className="object-contain" />
                             </div>
 
                             {/* CONTENT */}
