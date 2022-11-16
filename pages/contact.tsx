@@ -126,18 +126,6 @@ class Contact extends React.Component {
     render() {
         const { messageCount, availableDates, countryCodeOptions, datePicked, timezone, datePickerRef, recaptchaRef, showSubmitButton } = this.state
 
-        const SubmitButton = ({ display }: { display: Boolean }): any => {
-            if (display) {
-                return (
-                    <button type="submit" className="mx-auto align-middle hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded">
-                        Envoyer
-                    </button>)
-            } else {
-                return null
-            }
-        }
-
-
         return (
             <>
                 <div className="my-10 mx-auto w-10/12 pb-10 border-b border-black text-center text- 6xl font-semibold">
@@ -266,9 +254,9 @@ class Contact extends React.Component {
                             onChange={this.onReCAPTCHAChange}
                         />
                         <div className="flex flex-col m-auto justify-center p-5 ">
-                            {/* <div className=" bg-orange-600 w-100"> */}
-                                <SubmitButton display={showSubmitButton} />
-                            {/* </div> */}
+                            <button type="submit" className={`${showSubmitButton ? 'visible' : 'invisible'} mx-auto align-middle hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded`}>
+                                Envoyer
+                            </button>
                         </div>
                     </div>
                 </form>
