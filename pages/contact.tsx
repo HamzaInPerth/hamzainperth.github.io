@@ -254,7 +254,7 @@ class Contact extends React.Component {
                             onChange={this.onReCAPTCHAChange}
                         />
                         <div className="flex flex-col m-auto justify-center p-5 ">
-                            <button type="submit" className={`${showSubmitButton ? 'visible' : 'invisible'} mx-auto align-middle hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded`}>
+                            <button type="submit" disabled={!!showSubmitButton} className={`${showSubmitButton ? 'visible' : 'invisible'} mx-auto align-middle hover:text-gray-800 text-gray-100 transition-all duration-300 bg-black hover:bg-gray-200 font-semibold  py-2 px-4 border border-black rounded`}>
                                 Envoyer
                             </button>
                         </div>
