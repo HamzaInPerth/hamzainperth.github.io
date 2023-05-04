@@ -17,9 +17,9 @@ module.exports = {
       // 'contact': { page: '/contact' },
     }
   },
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
-  },
+  // experimental: {
+  //   images: {
+  //     unoptimized: true,
+  //   },
+  // },
 }
