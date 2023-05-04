@@ -24,7 +24,7 @@ module.exports = {
   experimental: {
     optimizeImages: false,
     // experimental: {
-      newNextLinkBehavior: false,
+    newNextLinkBehavior: false,
     // },
   },
 }
