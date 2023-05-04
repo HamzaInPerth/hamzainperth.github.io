@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import github from '../assets/_img/github-logo.png'
 import linkedin from '../assets/_img/linkedin-logo.png'
-import lichess from '../assets/_img/lichess-logo.avif'
+import lichess from '../assets/_img/lichess.png'
 import buyMeCoffee from '../assets/_img/buy-me-a-coffee.png'
 import me from '../assets/_img/me.jpg'
 const Index = () => {
@@ -69,6 +69,7 @@ const Index = () => {
                                 loader={imageLoader}
                                 src={element.picture}
                                 alt={element.alt}
+                                objectFit="cover"
                                 width={'100%'}
                                 height={'100%'}
                                 layout="fixed"
