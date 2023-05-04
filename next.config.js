@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    loader: "custom",
     unoptimized: true,
   },
+  // images: {
+  //   formats: ['image/webp'],
+  //   loader: "custom",
+  //   unoptimized: false,
+  // },
   reactStrictMode: true,
   exportPathMap: async function (
     defaultPathMap,
@@ -17,9 +21,10 @@ module.exports = {
       // 'contact': { page: '/contact' },
     }
   },
-  // experimental: {
-  //   images: {
-  //     unoptimized: true,
-  //   },
-  // },
+  experimental: {
+    optimizeImages: false,
+    // experimental: {
+      newNextLinkBehavior: false,
+    // },
+  },
 }

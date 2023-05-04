@@ -4,7 +4,7 @@ import Image from 'next/image'
 import github from '../assets/_img/github-logo.png'
 import linkedin from '../assets/_img/linkedin-logo.png'
 import lichess from '../assets/_img/lichess.png'
-import buyMeCoffee from '../assets/_img/buy-me-a-coffee.png'
+// import buyMeCoffee from '../assets/_img/buy-me-a-coffee.png'
 import me from '../assets/_img/me.jpg'
 const Index = () => {
     function imageLoader({ src }: any) {
@@ -70,8 +70,8 @@ const Index = () => {
                                 src={element.picture}
                                 alt={element.alt}
                                 objectFit="cover"
-                                width={'100%'}
-                                height={'100%'}
+                                // width={200}
+                                height={100}
                                 layout="fixed"
                             /></a>
                         </div>
