@@ -26,11 +26,6 @@ const Index = () => {
             alt: "Play chess with me",
             link: 'https://lichess.org/@/hamzainparis',
         },
-        // {
-        //     picture: buyMeCoffee,
-        //     alt: 'Buy me a coffee',
-        //     link: 'https://buymeacoffee.com/hamzafromparis',
-        // }
     ]
     return (
         <div className="min-h-screen p-10  tracking-widest leading-loose">
