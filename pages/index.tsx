@@ -16,11 +16,11 @@ const Index = () => {
             alt: "my github",
             link: 'https://github.com/HamzaInPerth',
         },
-        // {
-        //     picture: linkedin,
-        //     alt: "my linkedin",
-        //     link: 'https://www.linkedin.com/in/hamzafromparis',
-        // },
+        {
+            picture: linkedin,
+            alt: "my linkedin",
+            link: 'https://www.linkedin.com/in/hamzafromparis',
+        },
         {
             picture: lichess,
             alt: "Play chess with me",
