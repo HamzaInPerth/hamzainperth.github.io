@@ -1,6 +1,6 @@
 const Colors = {
   'custom-blue': '#2176ae',
-  'custom-white': '#E9F1F7',
+  'custom-white': '#020314',
   'custom-red': '#B74F6F',
   'custome-green': '#5C946E',
 }
