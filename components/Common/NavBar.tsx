@@ -20,7 +20,7 @@ class NavBar extends React.Component {
     }
 
     componentDidMount() {
-        console.log('mounted')
+        // console.log('mounted')
     }
 
 
@@ -35,7 +35,7 @@ class NavBar extends React.Component {
         const { active } = this.state
         let darkMode = false
         return (
-            <div className={` h-sceeen relative  border-r ${darkMode ? 'bg-black text-white' : 'text-black'}`} style={{ zIndex: '100' }}>
+            <div className={`h-sceeen relative   text-slate-200`} style={{ zIndex: '100' }}>
                 <div className="fixed md:sticky z-50 bg-white md:m-0 m-2 rounded-full md:border-0 border-2 border-black">
                     <button className="md:hidden block p-2" onClick={() => this.toggleMenu(!active)}>
                         <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6" >
@@ -49,6 +49,7 @@ class NavBar extends React.Component {
                     <ul>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/"><a>Home</a></Link></li>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li>
+                        <li onClick={() => this.toggleMenu(false)}><Link href="/experiences"><a>Experiences</a></Link></li>
                         {/* <li onClick={() => this.toggleMenu(false)}><Link href="/about-me"><a>About me</a></Link></li> */}
                     </ul>
                 </div>

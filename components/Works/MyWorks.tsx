@@ -9,14 +9,14 @@ function MyWorks() {
     return (
         <div className="flex flex-wrap mx-3 lg:mx-10">
             {workData.map(function (work, key) {
-                return <div key={key} className="w-full sm:w-1/2 xl:w-1/3 mx-2 sm:mx-0 my-2 group flex flex-col  "  >
+                return <div key={key} className="w-full  mx-2 sm:mx-0 my-2 group flex flex-col  "  >
                     <div className="text-black sm:m-2 h-full ease-in-out duration-500 shadow flex flex-col justify-between ">
                         {/* BODY */}
                         <div className="flex flex-col justify-between h-full z-40 relative overflow-hidden">
 
                             {/* OVERLAY */}
                             <div className="absolute h-full w-full group-hover:opacity-0 group-hover:pointer-events-none group-hover:scale-x-0 group-hover:skew-x-12 group-hover:rotate-180 group-hover:delay-0 delay-700 transition-all duration-700 px-10 py-5 ease-in-out bg-white flex flex-col justify-center">
-                                <Image loader={imageLoader} src={work.logo} alt={work.name} className="object-contain " />
+                                <Image loader={imageLoader} src={work.logo} alt={work.name} className="object-contain h-full" />
                             </div>
 
                             {/* CONTENT */}
