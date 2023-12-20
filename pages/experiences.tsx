@@ -33,16 +33,14 @@ const xp = [
 
 const Experiences = () => {
     return (
-        <div >
+      <div className="p-3">
             <h1 className="my-10 mx-auto w-9/12 pb-10 border-b border-black text-center text-6xl text-slate-100 font-semibold ">Experiences</h1>
-
-
             <section className="text-slate-300 flex flex-col gap-y-5">
             {xp.map((x, key) => 
                 (<div key={key}>
                     <h3 className="text-2xl font-bold">{x.company} — {x.position}</h3>
                     <span className="text-xs mb-4">{x.duration}</span>
-                    <p>{x.description}</p>
+                    <p className="text-justify lg:w-2/3">{x.description}</p>
 
                 </div>
                 )
