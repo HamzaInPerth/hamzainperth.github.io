@@ -36,7 +36,7 @@ class NavBar extends React.Component {
         let darkMode = false
         return (
             <div className={`h-sceeen relative   text-slate-200`} style={{ zIndex: '100' }}>
-                <div className="fixed md:sticky z-50 bg-white md:m-0 m-2 rounded-full md:border-0 border-2 border-black">
+                <div className="fixed md:sticky z-50 bg-black md:m-0 m-2 rounded-full shadow-sm border-slate-400 md:border-0 border ">
                     <button className="md:hidden block p-2" onClick={() => this.toggleMenu(!active)}>
                         <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6" >
                             <path className={`transition-all ease-in-out  ${active ? 'opacity-0 pointer-events-none scale-150' : 'opacity-100 scale-100'}`} fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd"></path>
@@ -45,7 +45,11 @@ class NavBar extends React.Component {
                     </button>
                 </div>
 
-                <div className={`wrap-menu-items ${active ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto'}`}>
+                <div
+                
+                
+                
+                className={`wrap-menu-items ${active ? 'opacity-100 pointer-events-auto ' : 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto'} bg-custom-white md:bg-transparent`}>
                     <ul>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/"><a>Home</a></Link></li>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li>
