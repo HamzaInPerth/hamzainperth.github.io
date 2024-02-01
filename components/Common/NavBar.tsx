@@ -52,7 +52,7 @@ class NavBar extends React.Component {
                 className={`wrap-menu-items ${active ? 'opacity-100 pointer-events-auto ' : 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto'} bg-custom-white md:bg-transparent`}>
                     <ul>
                         <li onClick={() => this.toggleMenu(false)}><Link href="/"><a>Home</a></Link></li>
-                        <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li>
+                        {/* <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li> */}
                         <li onClick={() => this.toggleMenu(false)}><Link href="/experiences"><a>Experiences</a></Link></li>
                         {/* <li onClick={() => this.toggleMenu(false)}><Link href="/about-me"><a>About me</a></Link></li> */}
                     </ul>
