@@ -66,11 +66,11 @@ const Index = () => {
             <div className=" w-full flex flex-col space-y-3">
                 <p><b className="text-cyan-200">Some random things I am use to : </b>Conventional Commits, Jira, Docker, JWT, Redis, VueX, Pinia, Axios, SEO, React, NextJS, Googling stuffs...</p>
                 <i className="text-gray-500">This portfolio has been made with NextJs.</i>
-                <div className="m-auto">
+                {/* <div className="m-auto">
                     <Link href="/works">
                         <a className="font-semibold text-xl tracking-widest px-4 py-2 bg-slate-700 border border-white hover:bg-black hover:text-cyan-200 rounded-lg transition-all ease-in-out duration-300 text-cyan-200">Check out my Works</a>
                     </Link>
-                </div>
+                </div> */}
             </div>
             
             <p className="font-light text-xl">When it comes to interact with humans, I use english, or french.</p>
