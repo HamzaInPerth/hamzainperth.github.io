@@ -1,94 +1,118 @@
-// import { BeakerIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
-import Image from 'next/image'
-import github from '../assets/_img/logo-github-white.png'
-import linkedin from '../assets/_img/linkedin-logo.png'
-import lichess from '../assets/_img/lichess.png'
-// import buyMeCoffee from '../assets/_img/buy-me-a-coffee.png'
-import me from '../assets/_img/me.jpg'
 
-const allSKills = [
+const skills = [
     {
-        type: 'Back End',
-        values: ["PHP", "SQL", "Laravel", "NodeJs", "ExpressJs", "NestJs", "Docker", "CI/CD", "API"]
+        category: 'AI / LLM',
+        items: ['RAG', 'Vector Search', 'OpenAI Embeddings', 'System Prompt Engineering', 'gpt-4o'],
+        icon: '🧠',
     },
     {
-        type: 'Front End',
-        values: ["Javascript", "Typescript", "Vue.Js", "React", "React-Native", "jQuery", "NextJs", "NuxtJs", "HTML", "CSS", "SASS", "Bootstrap", "Tailwind"]
+        category: 'Frontend',
+        items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Tauri v2', 'Figma', 'Storybook'],
+        icon: '🎨',
     },
-
     {
-        type: 'Others',
-        values: ["Linux", "Jira", "Git", "SEO", "Security best practice", "Agile Development", "Technical Documentation"]
-    }
+        category: 'Backend & DB',
+        items: ['Node.js', 'Fastify', 'Rust', 'PostgreSQL', 'Cassandra', 'SQLite', 'Redis', 'Meilisearch'],
+        icon: '⚙️',
+    },
+    {
+        category: 'DevOps & Tools',
+        items: ['Docker', 'CI/CD', 'GitHub Actions', 'Apple Code Signing', 'Cloudflare', 'Stripe'],
+        icon: '🚀',
+    },
 ]
+
 const Index = () => {
-    const imageLoader = ({ src }: { src: string }): string => src
-    const links = [
-        {
-            picture: github,
-            alt: "my github",
-            link: 'https://github.com/HamzaInPerth',
-        },
-        {
-            picture: linkedin,
-            alt: "my linkedin",
-            link: 'https://www.linkedin.com/in/hamzafromparis',
-        },
-        {
-            picture: lichess,
-            alt: "Play chess with me",
-            link: 'https://lichess.org/@/hamzainparis',
-        },
-    ]
     return (
-        <div className="min-h-screen p-10 tracking-widest leading-loose text-slate-200 gap-5 flex flex-col">
-            <div className="flex flex-col space-y-10 justify-center items-center">
-                <Image loader={imageLoader} alt="hamza" layout="fixed" objectFit="contain" className="rounded-full mx-auto shadow-2xl drop-shadow-2xl  shadow-slate-700" height={200} width={200} src={me} />
-                <div className="my-10 mx-auto w-9/12 pb-10 border-b border-black text-center text-6xl font-semibold">
-                    <h1 className="text-4xl font-black  tracking-widest leading-relaxed">Hamza</h1>
-                    <p className="text-xl font-medium">Software Engineer</p></div>
-
-
-                <h1 className="text-2xl font-bold mb-4">Skills</h1>
-                <div className="mx-auto flex flex-col lg:flex-row gap-6">
-                    {allSKills.map((skills, key) =>
-                    (<div key={key} className="mb-4 border border-slate-500 p-6 lg:w-1/3 rounded-xl shadow-md shadow-slate-600">
-                        <h2 className="text-lg font-semibold mb-2">{skills.type}</h2>
-                        <ul className="flex flex-row flex-wrap">
-                            {skills.values.map(skill => (<li className="m-3" key={skill.replace(/\s/g, '')}>{skill}</li>))}
-                        </ul>
-                    </div>))
-                    }
-                </div>
-            </div>
-
-            <div className=" w-full flex flex-col space-y-3">
-                <p><b className="text-cyan-200">Some random things I am use to : </b>Conventional Commits, Jira, Docker, JWT, Redis, VueX, Pinia, Axios, SEO, React, NextJS, Googling stuffs...</p>
-                <i className="text-gray-500">This portfolio has been made with NextJs.</i>
-                {/* <div className="m-auto">
-                    <Link href="/works">
-                        <a className="font-semibold text-xl tracking-widest px-4 py-2 bg-slate-700 border border-white hover:bg-black hover:text-cyan-200 rounded-lg transition-all ease-in-out duration-300 text-cyan-200">Check out my Works</a>
-                    </Link>
-                </div> */}
-            </div>
-            
-            <p className="font-light text-xl">When it comes to interact with humans, I use english, or french.</p>
-
-            <div className="flex flex-wrap w-full overflow-hidden h-auto">
-                {links.map(function (element, index) {
-                    return <div key={index} className="block h-24 m-3 relative">
-                        <a href={element.link} target="_blank"><Image
-                            placeholder='blur'
-                            loader={imageLoader}
-                            src={element.picture}
-                            alt={element.alt}
-                            height={50}
-                            
-                        /></a>
+        <div className="min-h-screen">
+            {/* Hero Section */}
+            <section className="min-h-[90vh] flex flex-col justify-center px-6 max-w-6xl mx-auto pt-20">
+                <div className="animate-slide-up">
+                    <p className="text-accent font-mono text-sm mb-4 tracking-wider">Hi, my name is</p>
+                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                        Hamza Chikhi<span className="text-accent">.</span>
+                    </h1>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-400 mb-8">
+                        I build intelligent software.
+                    </h2>
+                    <p className="text-gray-400 text-lg max-w-2xl leading-relaxed mb-10">
+                        AI Product Engineer & Fullstack Developer specializing in production-ready AI workflows,
+                        scalable architectures, and clean UX. From RAG pipelines to cross-platform desktop apps —
+                        I ship products that deliver real value.
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <Link href="/experiences">
+                            <a className="px-6 py-3 rounded-lg bg-accent text-white font-medium hover:bg-accent-dark transition-all duration-200 hover:shadow-lg hover:shadow-accent/25">
+                                View Experience
+                            </a>
+                        </Link>
+                        <Link href="/works">
+                            <a className="px-6 py-3 rounded-lg border border-accent text-accent font-medium hover:bg-accent/10 transition-all duration-200">
+                                See Projects
+                            </a>
+                        </Link>
                     </div>
-                })}
-            </div>
+                </div>
+
+                {/* Social links */}
+                <div className="mt-16 flex items-center gap-6">
+                    <a href="https://github.com/HamzaInPerth" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hamzafromparis" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:chikhi.h@gmail.com" className="text-gray-500 hover:text-white transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </a>
+                    <span className="text-gray-600 text-sm ml-2">Montreal, QC</span>
+                </div>
+            </section>
+
+            {/* Skills Section */}
+            <section className="px-6 py-24 max-w-6xl mx-auto">
+                <h2 className="section-heading">Technical Expertise</h2>
+                <p className="section-subheading">Technologies I work with daily to build production systems</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {skills.map((group) => (
+                        <div key={group.category} className="card group hover:translate-y-[-2px]">
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="text-2xl">{group.icon}</span>
+                                <h3 className="text-lg font-semibold text-white">{group.category}</h3>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {group.items.map(item => (
+                                    <span key={item} className="badge">{item}</span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Quick highlights */}
+            <section className="px-6 py-16 max-w-6xl mx-auto border-t border-white/5">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div className="text-3xl font-bold text-white">8+</div>
+                        <div className="text-gray-500 text-sm mt-1">Years Experience</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-white">AI</div>
+                        <div className="text-gray-500 text-sm mt-1">RAG & LLM Systems</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-white">Full Stack</div>
+                        <div className="text-gray-500 text-sm mt-1">End to End Delivery</div>
+                    </div>
+                    <div>
+                        <div className="text-3xl font-bold text-white">FR / EN</div>
+                        <div className="text-gray-500 text-sm mt-1">Bilingual</div>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

@@ -1,64 +1,92 @@
-// import { BeakerIcon } from '@heroicons/react/solid'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import Link from 'next/link'
-interface INavBarProps {
-    darkMode: boolean
-}
+const NavBar = () => {
+    const [open, setOpen] = useState(false);
+    const router = useRouter();
 
-class NavBar extends React.Component {
-    constructor(props: INavBarProps) {
-        super(props)
-    }
+    const links = [
+        { href: '/', label: 'Home' },
+        { href: '/experiences', label: 'Experience' },
+        { href: '/works', label: 'Projects' },
+    ];
 
-    state = {
-        active: false
-    }
+    return (
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+            <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+                <Link href="/">
+                    <a className="text-xl font-bold text-white tracking-tight">
+                        H<span className="text-accent">.</span>
+                    </a>
+                </Link>
 
-    toggleMenu = (active: boolean) => {
-        this.setState({ active })
-    }
+                {/* Desktop nav */}
+                <ul className="hidden md:flex items-center gap-8">
+                    {links.map(link => (
+                        <li key={link.href}>
+                            <Link href={link.href}>
+                                <a className={`nav-link ${router.pathname === link.href ? 'nav-link-active' : ''}`}>
+                                    {link.label}
+                                </a>
+                            </Link>
+                        </li>
+                    ))}
+                    <li>
+                        <a
+                            href="mailto:chikhi.h@gmail.com"
+                            className="px-4 py-2 rounded-lg bg-accent text-white text-sm font-medium hover:bg-accent-dark transition-colors"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
 
-    componentDidMount() {
-        // console.log('mounted')
-    }
+                {/* Mobile toggle */}
+                <button
+                    className="md:hidden text-gray-300 hover:text-white"
+                    onClick={() => setOpen(!open)}
+                    aria-label="Toggle menu"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {open ? (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        ) : (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        )}
+                    </svg>
+                </button>
+            </div>
 
-
-
-
-    // componentDidUpdate(prevProps, prevState) {
-    // console.log(prevProps, prevState, this.state)
-    // }
-
-    render() {
-        // const { darkMode } = this.props
-        const { active } = this.state
-        let darkMode = false
-        return (
-            <div className={`h-sceeen relative   text-slate-200`} style={{ zIndex: '100' }}>
-                <div className="fixed md:sticky z-50 bg-black md:m-0 m-2 rounded-full shadow-sm border-slate-400 md:border-0 border ">
-                    <button className="md:hidden block p-2" onClick={() => this.toggleMenu(!active)}>
-                        <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6" >
-                            <path className={`transition-all ease-in-out  ${active ? 'opacity-0 pointer-events-none scale-150' : 'opacity-100 scale-100'}`} fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clipRule="evenodd"></path>
-                            <path className={`transition-all ease-in-out ${active ? 'opacity-100 scale-100' : 'opacity-0 pointer-events-none scale-150'}`} fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <div
-                
-                
-                
-                className={`wrap-menu-items ${active ? 'opacity-100 pointer-events-auto ' : 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto'} bg-custom-white md:bg-transparent`}>
-                    <ul>
-                        <li onClick={() => this.toggleMenu(false)}><Link href="/"><a>Home</a></Link></li>
-                        {/* <li onClick={() => this.toggleMenu(false)}><Link href="/works"><a>Works</a></Link></li> */}
-                        <li onClick={() => this.toggleMenu(false)}><Link href="/experiences"><a>Experiences</a></Link></li>
-                        {/* <li onClick={() => this.toggleMenu(false)}><Link href="/about-me"><a>About me</a></Link></li> */}
+            {/* Mobile menu */}
+            {open && (
+                <div className="md:hidden bg-dark-800 border-t border-white/5 px-6 py-6 animate-fade-in">
+                    <ul className="flex flex-col gap-4">
+                        {links.map(link => (
+                            <li key={link.href}>
+                                <Link href={link.href}>
+                                    <a
+                                        onClick={() => setOpen(false)}
+                                        className={`block text-lg font-medium ${router.pathname === link.href ? 'text-white' : 'text-gray-400'}`}
+                                    >
+                                        {link.label}
+                                    </a>
+                                </Link>
+                            </li>
+                        ))}
+                        <li>
+                            <a
+                                href="mailto:chikhi.h@gmail.com"
+                                className="inline-block px-4 py-2 rounded-lg bg-accent text-white text-sm font-medium"
+                            >
+                                Contact
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div>)
-    }
-}
+            )}
+        </nav>
+    );
+};
 
-export default NavBar
+export default NavBar;
